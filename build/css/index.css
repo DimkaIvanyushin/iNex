@@ -1,2 +1,188 @@
-h1 {
-  color: brown; }
+body {
+  background-color: #fff;
+  color: #74757f;
+  font-family: "Exo 2", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  font-weight: 300;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #0095d9 !important;
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2d3742;
+}
+.mt-75 {
+  margin-top: 75px;
+}
+.mt-45 {
+  margin-top: 45px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.bg-gray {
+  background-color: #f5f6fa;
+}
+.bg-primary-darker {
+  background-color: #12394b;
+}
+.button {
+  font-family: "Exo 2";
+  overflow: hidden;
+  padding: 13px 35px;
+  font-size: 14px;
+  line-height: 1.25;
+  border: 2px solid;
+  border-radius: 0;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+.button-primar {
+  color: #2d3742;
+  background-color: transparent;
+  border-color: #0095d9;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+.button-primar:hover {
+  color: #fff;
+  background-color: #0095d9;
+  border-color: #0095d9;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+.button-winona {
+  color: #fff;
+  background-color: #0095d9;
+  border-color: #0095d9;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+.button-winona:hover {
+  color: #fff !important;
+  background-color: #00537b;
+  border-color: #00537b;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+.link-default,
+.link-default:active,
+.link-default:focus {
+  color: #74757f;
+  outline: none;
+}
+.icon-md {
+  color: #0095d9;
+  font-size: 1.3em;
+}
+.section-lg {
+  padding: 80px 0;
+}
+.section-xs {
+  padding: 40px 0;
+}
+section h3 {
+  font-size: 36px;
+  font-weight: 300;
+}
+section h4 {
+  font-weight: 300;
+}
+.wow-outer {
+  position: relative;
+  overflow: hidden;
+}
+header .top-menu {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+header .top-menu .contact .icon {
+  border-radius: 50%;
+  border: 1px solid #e8e9ee;
+  color: $main-color;
+  min-width: 48px;
+  min-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.slider .item {
+  height: 750px;
+  background-size: cover;
+}
+section.slider .item .container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section.slider .item .container .description h1 {
+  font-size: 55px;
+  line-height: 1.17647;
+}
+section.slider .item .container .description button {
+  margin-top: 40px;
+}
+section.slider .carousel-indicators {
+  display: flex;
+  position: relative;
+  justify-content: start;
+  top: -100px;
+  margin: 0;
+}
+section.slider .carousel-indicators span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+section.slider .carousel-indicators span:hover {
+  font-weight: 600;
+}
+section.slider .carousel-indicators span.active {
+  color: #fff;
+  font-weight: 300;
+  background-color: $main-color;
+}
+section.slider .pagination ul {
+  display: flex;
+}
+section.slider .pagination ul li {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+section.slider .pagination ul li:hover,
+section.slider .pagination ul li.active {
+  transform: scale(1.5);
+  background-color: $main-color;
+}
+section.smallFeatures .box p {
+  margin-top: 16px;
+}
+section.smallFeatures .box .icon {
+  font-size: 36px;
+  color: #0095d9;
+}

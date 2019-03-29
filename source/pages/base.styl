@@ -1,0 +1,108 @@
+@import './colors.styl'
+
+$text-size = 16px
+$text-weight = 300
+$button-text-size = 14px
+
+$text-family = "Exo 2"
+
+body
+    background-color: #fff;
+    color: $text-color;
+    font-family: $text-family, sans-serif;
+    font-size: $text-size;
+    letter-spacing: 0.03em;
+    line-height: 1.5;
+    font-weight: $text-weight;
+
+a:hover, a:focus, a:active {
+    color: $main-color !important;
+    text-decoration: none;
+}
+
+ul,li
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+h1, h2, h3, h4, h5, h6
+    color: $text-color-bold;
+
+.mt-75
+    margin-top: 75px;
+
+.mt-45
+    margin-top: 45px;
+
+.mt-30
+    margin-top: 30px;
+
+.bg-gray 
+    background-color: $mute-color
+
+.bg-primary-darker 
+    background-color: $darke-color
+
+.button
+    font-family: $text-family;
+    overflow: hidden;
+    padding: 13px 35px;
+    font-size: $button-text-size;
+    line-height: 1.25;
+    border: 2px solid;
+    border-radius: 0;
+    font-weight: 500;
+    letter-spacing: .2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+.button-primar
+    color: $text-color-bold;
+    background-color: transparent;
+    border-color: $main-color
+    transition: background .5s ease, color .5s ease;
+
+.button-primar:hover
+    color: #fff;
+    background-color: $main-color
+    border-color: $main-color
+    transition: background .5s ease, color .5s ease;
+
+.button-winona
+    color: #fff;
+    background-color: $main-color
+    border-color: $main-color
+    transition: background .5s ease, color .5s ease;
+
+.button-winona:hover
+    color: #fff !important;
+    background-color: $main-color-hover
+    border-color: $main-color-hover
+    transition: background .5s ease, color .5s ease;
+
+.link-default, .link-default:active, .link-default:focus 
+    color: $text-color;
+    outline: none;
+
+.icon-md
+    color: $main-color 
+    font-size: 1.3em;
+
+.section-lg 
+    padding: 80px 0;
+
+.section-xs 
+    padding: 40px 0;
+
+section 
+    h3 
+        font-size: 36px;
+        font-weight: 300;
+    h4
+        font-weight: 300
+
+.wow-outer
+    position: relative;
+    overflow: hidden;

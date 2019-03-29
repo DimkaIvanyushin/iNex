@@ -1,0 +1,42 @@
+.navbar.navbar-expand-md.main-menu
+    .container
+        .container-mobile-menu
+            button.navbar-toggler(
+                type="button" 
+                data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                data-toggle="collapse"
+                aria-expanded="false" 
+                aria-label="Toggle navigation")
+
+                i.fas.fa-bars.icon-md
+
+            button.navbar-toggler(
+                type="button" 
+                data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                data-toggle="collapse"
+                aria-expanded="false" 
+                aria-label="Toggle navigation 2")
+
+                i.fas.fa-ellipsis-v.icon-md
+
+        .collapse.navbar-collapse#navbarSupportedContent
+            ul.navbar-nav.mr-auto
+                li.active.nav-item
+                    a.nav-link(href="#") Главная
+
+                li.nav-item.dropdown
+                    a.nav-link(href="#") Продукция
+
+                li.nav-item
+                    a.nav-link(href="#") Решения
+                
+                li.nav-item
+                    a.nav-link(href="#") О бренде
+                
+                li.nav-item
+                    a.nav-link(href="#") Контакты
+            
+            span.nav-item.search.mr-0.d-none.d-md-block
+                i.fas.fa-search

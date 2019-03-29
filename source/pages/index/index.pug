@@ -2,5 +2,18 @@ extends ../base
 block title
     | Index page
 block main
-    h1 Традиционная проверка
-    img(src=require("./webpack.svg") width="100")
+    header
+        include ../../components/header-top/header-top.pug
+        include ../../components/header-menu/header-menu.pug
+
+    section.slider
+        include ../../components/slider/slider.pug
+
+    sectoin.aboutUs
+        include ../../components/about-us/about-us.pug
+
+    section.smallFeatures
+        include ../../components/small-features/small-features.pug
+
+    section.alertCTA
+        include ../../components/alert-cta/alert-cta.pug

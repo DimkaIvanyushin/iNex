@@ -1,0 +1,57 @@
+section.slider
+    .item
+        height: 750px;
+        background-size: cover;
+
+        .container
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .description
+                h1
+                    font-size: 55px;
+                    line-height: 1.17647;
+
+                button
+                    margin-top: 40px;
+
+    .carousel-indicators
+        display: flex;
+        position: relative;
+        justify-content: start;
+        top: -100px;
+        margin: 0;
+
+        span
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-right: 15px;
+            cursor: pointer;
+            font-size: 16px;
+
+            &:hover
+                font-weight: 600;
+
+            &.active
+                color: #fff;
+                font-weight: 300;
+                background-color: $main-color
+
+    .pagination 
+        ul
+            display: flex
+            li
+                background-color: white;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                margin-right: 10px;
+                cursor: pointer;
+
+                &:hover, &.active
+                    transform: scale(1.5);
+                    background-color: $main-color
