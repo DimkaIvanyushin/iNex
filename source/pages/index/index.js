@@ -20,5 +20,7 @@ import '../../components/slider/slider.styl'
 import '../../components/about-us/about-us.styl'
 import '../../components/small-features/small-features.styl'
 import '../../components/alert-cta/alert-cta.styl'
+import '../../components/services/services.styl'
+
 
 new WOW().init();
