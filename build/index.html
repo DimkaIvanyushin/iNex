@@ -1,153 +1,612 @@
-<head><link href="./css/common.css" rel="stylesheet"><link href="./css/index.css" rel="stylesheet"></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module build failed: Error: C:\Users\D.Ivanushin\project\iNex\source\components\alert-cta\alert-cta.pug:2:1
-      1|  .container 
-    > 2|     .row 
-  -------^
-      3|         .col-12.col-lg-8.d-flex.justify-content-center.align-items-center.wow-outer 
-      4|             h4.text-white.text-center.wow.slideInRight  
-      5|                 span Узнайте  
-  unexpected token "indent"
-  
-  - index.js:32 makeError
-    [iNex]/[pug-error]/index.js:32:13
-  
-  - index.js:53 Parser.error
-    [iNex]/[pug-parser]/index.js:53:15
-  
-  - index.js:264 Parser.parseExpr
-    [iNex]/[pug-parser]/index.js:264:14
-  
-  - index.js:112 Parser.parse
-    [iNex]/[pug-parser]/index.js:112:25
-  
-  - index.js:12 parse
-    [iNex]/[pug-parser]/index.js:12:20
-  
-  - index.js:125 Object.parse
-    [iNex]/[pug]/lib/index.js:125:22
-  
-  - index.js:45 Function.loadString [as string]
-    [iNex]/[pug-load]/index.js:45:21
-  
-  - index.js:31 
-    [iNex]/[pug-load]/index.js:31:27
-  
-  - index.js:23 walkAST
-    [iNex]/[pug-walk]/index.js:23:18
-  
-  - index.js:104 
-    [iNex]/[pug-walk]/index.js:104:20
-  
-  - Array.reduce
-  
-  - index.js:103 walkAndMergeNodes
-    [iNex]/[pug-walk]/index.js:103:18
-  
-  - index.js:37 walkAST
-    [iNex]/[pug-walk]/index.js:37:19
-  
-  - index.js:48 walkAST
-    [iNex]/[pug-walk]/index.js:48:21
-  
-  - index.js:104 
-    [iNex]/[pug-walk]/index.js:104:20
-  
-  - Array.reduce
-  
-  - index.js:103 walkAndMergeNodes
-    [iNex]/[pug-walk]/index.js:103:18
-  
-  - index.js:37 walkAST
-    [iNex]/[pug-walk]/index.js:37:19
-  
-  - index.js:104 
-    [iNex]/[pug-walk]/index.js:104:20
-  
-  - Array.reduce
-  
-  - index.js:103 walkAndMergeNodes
-    [iNex]/[pug-walk]/index.js:103:18
-  
-  - index.js:37 walkAST
-    [iNex]/[pug-walk]/index.js:37:19
-  
-  - index.js:13 load
-    [iNex]/[pug-load]/index.js:13:10
-  
-  - index.js:46 Function.loadString [as string]
-    [iNex]/[pug-load]/index.js:46:10
-  
-  - index.js:86 compileBody
-    [iNex]/[pug]/lib/index.js:86:18
-  
-  - index.js:290 Object.exports.compileClientWithDependenciesTracked
-    [iNex]/[pug]/lib/index.js:290:16
-  
-  - index.js:336 Object.exports.compileClient
-    [iNex]/[pug]/lib/index.js:336:18
-  
-  - index.js:136 run
-    [iNex]/[pug-loader]/index.js:136:23
-  
-  - index.js:61 
-    [iNex]/[pug-loader]/index.js:61:7
-  
-  
-  - Error: C:\Users\D.Ivanushin\project\iNex\source\components\alert-cta\alert-cta.pug:2:1
-  
-  - 1|  .container
-  
-  - > 2|     .row
-  
-  - -------^
-  
-  - 3|         .col-12.col-lg-8.d-flex.justify-content-center.align-items-center.wow-outer
-  
-  - 4|             h4.text-white.text-center.wow.slideInRight
-  
-  - 5|                 span Узнайте
-  
-  - unexpected token "indent"
-  
-  - compiler.js:76 
-    [iNex]/[html-webpack-plugin]/lib/compiler.js:76:16
-  
-  - Compiler.js:296 Compiler.<anonymous>
-    [iNex]/[webpack]/lib/Compiler.js:296:10
-  
-  - Compiler.js:499 
-    [iNex]/[webpack]/lib/Compiler.js:499:13
-  
-  - Tapable.js:202 next
-    [iNex]/[tapable]/lib/Tapable.js:202:11
-  
-  - CachePlugin.js:62 Compiler.<anonymous>
-    [iNex]/[webpack]/lib/CachePlugin.js:62:5
-  
-  - Tapable.js:206 Compiler.applyPluginsAsyncSeries
-    [iNex]/[tapable]/lib/Tapable.js:206:13
-  
-  - Compiler.js:496 
-    [iNex]/[webpack]/lib/Compiler.js:496:10
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [iNex]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:649 self.applyPluginsAsync.err
-    [iNex]/[webpack]/lib/Compilation.js:649:19
-  
-  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
-    [iNex]/[tapable]/lib/Tapable.js:195:46
-  
-  - Compilation.js:640 self.applyPluginsAsync.err
-    [iNex]/[webpack]/lib/Compilation.js:640:11
-  
-  - Tapable.js:202 next
-    [iNex]/[tapable]/lib/Tapable.js:202:11
-  
-  - UglifyJsPlugin.js:230 Compilation.compilation.plugin
-    [iNex]/[webpack]/lib/optimize/UglifyJsPlugin.js:230:5
-  
-</pre><script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum|Exo+2:100,100i,200,200i,300,300i,400|PT+Sans|PT+Sans+Narrow&amp;amp;subset=cyrillic" rel="stylesheet">
+    <title>Index page
+    </title>
+  <link href="./css/common.css" rel="stylesheet"><link href="./css/index.css" rel="stylesheet"></head>
+  <body>
+    <header>
+<div class="container top-menu d-none d-md-block">
+  <div class="row d-flex align-items-center">
+    <div class="col-sm-12 col-lg-3"><img src="images/logo.svg" height="39"></div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="contact d-flex align-items-center">
+        <div class="icon"><i class="fas fa-phone icon-md"></i></div>
+        <div class="info ml-3">
+          <ul>
+            <li><a class="link-default" href="tel:#">1-800-1234-567</a></li>
+            <li><a class="link-default" href="tel:#">1-800-1234-567</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="contact d-flex">
+        <div class="icon"><i class="fas fa-map-marker-alt icon-md"></i></div>
+        <div class="info ml-3">
+          <ul>
+            <li><a class="link-default" href="#">Улица Правды 30, Витебск 210029</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-3 d-flex justify-content-end">
+      <button class="button button-primar">Заказать звонок</button>
+    </div>
+  </div>
+</div>
+            <div class="navbar navbar-expand-md main-menu">
+              <div class="container">
+                <div class="container-mobile-menu">
+                  <button class="navbar-toggler" type="button" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars icon-md"></i></button><img class="d-md-none" src="images/logo.svg" height="25" alt="logo">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-top-mobile" aria-controls="menu-top-mobile" aria-expanded="false" aria-label="Toggle navigation 2"><i class="fas fa-ellipsis-v icon-md"></i></button>
+                </div>
+                <div class="d-md-none d-xs-none">
+                  <div class="collapse navbar-collapse" id="menu-top-mobile">
+                    <div class="container pb-3">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="contact d-flex align-items-center">
+                            <div class="icon"><i class="fas fa-phone icon-md"></i></div>
+                            <div class="info ml-3">
+                              <ul>
+                                <li><a class="link-default" href="tel:#">1-800-1234-567</a></li>
+                                <li><a class="link-default" href="tel:#">1-800-1234-567</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="contact d-flex align-items-center">
+                            <div class="icon"><i class="fas fa-map-marker-alt icon-md"></i></div>
+                            <div class="info ml-3">
+                              <ul>
+                                <li><a class="link-default" href="#">Улица Правды 30, Витебск 210029</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                          <button class="button button-primar">Заказать звонок</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="collapse navbar-collapse overflow-hidden position-relative" id="navbarSupportedContent"><img class="logo-dt d-none d-md-block hide" src="images/logo.svg" height="20" alt="logo">
+                  <ul class="navbar-nav mr-auto hide">
+                    <li class="active nav-item"><a class="nav-link" href="#">Главная</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link" href="#">Продукция</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Решения</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">О бренде</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                  </ul><span class="nav-item search d-none d-md-block"><i class="fas fa-search"></i></span>
+                </div>
+              </div>
+            </div>
+    </header>
+<section class="slider">
+  <div class="carousel slide" id="slider-top" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active"> 
+        <div class="item d-flex align-items-center bg1">
+          <div class="container">
+            <div class="row description">
+              <div class="col-12">
+                <h1>
+                  <div class="wow-outer"><span class="font-weight-bold d-flex wow slideInDown" data-wow-delay="0.2s">Энергетика. Умнее.</span></div>
+                  <div class="wow-outer"><span class="font-weight-light d-flex wow slideInDown" data-wow-delay="0.2s">Опыт самых ответственных инженеров для решения ваших задач.</span></span></div>
+                </h1>
+                <div class="wow-outer">
+                  <button class="button button-winona wow slideInDown" data-wow-delay="0.2s" href="#">Консультация</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="item d-flex align-items-center bg2">
+          <div class="container">
+            <div class="row description">
+              <div class="col-12">
+                <h1>
+                  <div class="wow-outer"><span class="font-weight-bold d-flex wow slideInDown" data-wow-delay="0.2s">Технологичный минимализм.</span></div>
+                  <div class="wow-outer"><span class="font-weight-light d-flex wow slideInDown" data-wow-delay="0.2s">Качество функций всегда важнее их количества</span></span></div>
+                </h1>
+                <div class="wow-outer">
+                  <button class="button button-winona wow slideInDown" data-wow-delay="0.2s" href="#">Консультация</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="item d-flex align-items-center bg3">
+          <div class="container">
+            <div class="row description">
+              <div class="col-12">
+                <h1>
+                  <div class="wow-outer"><span class="font-weight-bold d-flex wow slideInDown" data-wow-delay="0.2s">Энергетика. Умнее.</span></div>
+                  <div class="wow-outer"><span class="font-weight-light d-flex wow slideInDown" data-wow-delay="0.2s">Опыт самых ответственных инженеров для решения ваших задач.</span></span></div>
+                </h1>
+                <div class="wow-outer">
+                  <button class="button button-winona wow slideInDown" data-wow-delay="0.2s" href="#">Консультация</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="carousel-indicators"><span class="active" data-target="#slider-top" data-slide-to="0">01</span><span data-target="#slider-top" data-slide-to="1">02</span><span data-target="#slider-top" data-slide-to="2">03</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="aboutUs padding-lg">
+  <div class="container">
+    <div class="row d-flex justify-content-between">
+      <div class="col-sm-12 col-lg-6 overflow-hidden"><img class="w-100 wow slideInLeft" src="images/about.jpg" alt="img"></div>
+      <div class="col-sm-12 col-lg-5 mr-t-20 wow-outer">
+        <h3 class="wow slideInDown">Почему он используется?</h3>
+        <div class="wow-outer">
+          <p class="mt-30 wow slideInDown">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона."</p>
+        </div>
+        <div class="wow-outer">
+          <p class="wow slideInDown">Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.</p>
+        </div>
+        <div class="wow-outer">
+          <button class="button button-winona mt-3 wow slideInDown" href="#">Узнать больше</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="smallFeatures bg-gray padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-4">
+        <div class="box d-flex">
+          <div class="icon"><i class="far fa-user"></i></div>
+          <div class="main ml-3">
+            <div class="wow-outer">
+              <h4 class="wow slideInDown">Сотрудники</h4>
+            </div>
+            <div class="wow-outer">
+              <p class="wow slideInDown">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-4">
+        <div class="box d-flex">
+          <div class="icon"><i class="far fa-comment-alt"></i></div>
+          <div class="main ml-3">
+            <div class="wow-outer">
+              <h4 class="wow slideInDown" data-wow-delay="0.15s">Консультации</h4>
+            </div>
+            <div class="wow-outer">
+              <p class="wow slideInDown" data-wow-delay="0.15s">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-4">
+        <div class="box d-flex">
+          <div class="icon"><i class="fas fa-check"></i></div>
+          <div class="main ml-3">
+            <div class="wow-outer">
+              <h4 class="wow slideInDown" data-wow-delay="0.3s">100% Гарантии</h4>
+            </div>
+            <div class="wow-outer">
+              <p class="wow slideInDown" data-wow-delay="0.3s">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="alert-cta bg-primary-darker padding-xs"> 
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8 d-flex justify-content-center align-items-center wow-outer">
+        <h4 class="text-white text-center wow slideInRight"> <span>Узнайте </span><span class="font-weight-bold">стоимость </span><span>прямо сейчас!</span></h4>
+      </div>
+      <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center mr-t-20 wow-outer">
+        <button class="button button-winona wow slideInLeft" href="#">Бесплатная консультация</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="services padding-lg">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12">
+        <div class="wow-outer">
+          <h3 class="text-center wow slideInDown">Продукция</h3>
+        </div>
+      </div>
+      <div class="col-12 col-lg-8">
+        <div class="wow-outer">
+          <p class="text-center mt-3 wow slideInDown">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center mt-45">
+      <div class="col-sm-6 col-lg-3">
+        <div class="item"><a class="blackout wow-outer" href="#"><img class="wow slideInLeft" src="https://livedemo00.template-help.com/wt_67881/images/service-thumbnail-1-270x300.jpg" width="270" alt="#"></a>
+          <h5 class="d-flex wow-outer"><a class="wow slideInLeft" href="#">Продукция</a></h5>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="item"><a class="blackout wow-outer" href="#"><img class="wow slideInLeft" src="https://livedemo00.template-help.com/wt_67881/images/service-thumbnail-2-270x300.jpg" width="270" alt="#"></a>
+          <h5 class="d-flex wow-outer"><a class="wow slideInLeft" href="#">Продукция</a></h5>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="item"><a class="blackout wow-outer" href="#"><img class="wow slideInLeft" src="https://livedemo00.template-help.com/wt_67881/images/service-thumbnail-2-270x300.jpg" width="270" alt="#"></a>
+          <h5 class="d-flex wow-outer"><a class="wow slideInLeft" href="#">Продукция</a></h5>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="item"><a class="blackout wow-outer" href="#"><img class="wow slideInLeft" src="https://livedemo00.template-help.com/wt_67881/images/service-thumbnail-2-270x300.jpg" width="270" alt="#"></a>
+          <h5 class="d-flex wow-outer"><a class="wow slideInLeft" href="#">Продукция</a></h5>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center mt-45">
+      <div class="col-12 d-flex justify-content-center wow-outer">
+        <button class="button button-primar wow slideInUp">Показать все</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="prices bg-gray padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 wow-outer">
+        <h3 class="text-center wow slideInUp">Цены</h3>
+      </div>
+    </div>
+    <div class="row mt-75">
+      <div class="col-sm-12 col-lg-4 mr-b-20 wow-outer">
+        <div class="box-price wow slideInRight">
+          <h5><a href="#">Стандарт</a></h5>
+          <p class="pricing-minimal-price mt-1">$49.00</p>
+          <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+          <button class="button button-winona mt-3" href="#">Узнать больше</button>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-4 mr-b-20 wow-outer">
+        <div class="box-price wow slideInRight">
+          <h5><a href="#">Стандарт</a></h5>
+          <p class="pricing-minimal-price mt-1">$49.00</p>
+          <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+          <button class="button button-winona mt-3" href="#">Узнать больше</button>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-4 mr-b-20 wow-outer">
+        <div class="box-price wow slideInRight">
+          <h5><a href="#">Стандарт</a></h5>
+          <p class="pricing-minimal-price mt-1">$49.00</p>
+          <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+          <button class="button button-winona mt-3" href="#">Узнать больше</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        <section class="recall padding-lg">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 wow-outer">
+                <h3 class="text-center wow slideInUp">Отзывы</h3>
+              </div>
+            </div>
+            <div class="carousel slide" id="slider-team" data-ride="carousel">
+              <div class="carousel-inner mt-75">
+                <div class="carousel-item active">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-12 col-lg-4 mr-b-20">
+                      <div class="team">
+                        <div class="title d-flex">
+                          <div class="avatar"><img class="rounded-circle" src="https://livedemo00.template-help.com/wt_67881/images/testimonials-person-5-96x96.jpg" width="50" alt=""></div>
+                          <div class="team_info ml-3"><span class="name">Гарольд Барнетт</span>
+                            <p class="dev">Региональный управляющий</p>
+                          </div>
+                        </div>
+                        <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mr-b-20">
+                      <div class="team">
+                        <div class="team_box">
+                          <div class="title d-flex">
+                            <div class="avatar"><img class="rounded-circle" src="https://livedemo00.template-help.com/wt_67881/images/testimonials-person-5-96x96.jpg" width="50" alt=""></div>
+                            <div class="team_info ml-3"><span class="name">Гарольд Барнетт</span>
+                              <p class="dev">Региональный управляющий</p>
+                            </div>
+                          </div>
+                          <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mr-b-20">
+                      <div class="team">
+                        <div class="team_box">
+                          <div class="title d-flex">
+                            <div class="avatar"><img class="rounded-circle" src="https://livedemo00.template-help.com/wt_67881/images/testimonials-person-5-96x96.jpg" width="50" alt=""></div>
+                            <div class="team_info ml-3"><span class="name">Гарольд Барнетт</span>
+                              <p class="dev">Региональный управляющий</p>
+                            </div>
+                          </div>
+                          <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-12 col-lg-4 mr-b-20">
+                      <div class="team">
+                        <div class="team_box">
+                          <div class="title d-flex">
+                            <div class="avatar"><img class="rounded-circle" src="https://livedemo00.template-help.com/wt_67881/images/testimonials-person-5-96x96.jpg" width="50" alt=""></div>
+                            <div class="team_info ml-3"><span class="name">Гарольд Барнетт</span>
+                              <p class="dev">Региональный управляющий</p>
+                            </div>
+                          </div>
+                          <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mr-b-20">
+                      <div class="team">
+                        <div class="team_box">
+                          <div class="title d-flex">
+                            <div class="avatar"><img class="rounded-circle" src="https://livedemo00.template-help.com/wt_67881/images/testimonials-person-5-96x96.jpg" width="50" alt=""></div>
+                            <div class="team_info ml-3"><span class="name">Гарольд Барнетт</span>
+                              <p class="dev">Региональный управляющий</p>
+                            </div>
+                          </div>
+                          <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mr-b-20">
+                      <div class="team">
+                        <div class="team_box">
+                          <div class="title d-flex">
+                            <div class="avatar"><img class="rounded-circle" src="https://livedemo00.template-help.com/wt_67881/images/testimonials-person-5-96x96.jpg" width="50" alt=""></div>
+                            <div class="team_info ml-3"><span class="name">Гарольд Барнетт</span>
+                              <p class="dev">Региональный управляющий</p>
+                            </div>
+                          </div>
+                          <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="carousel-indicators">
+                <li class="active" data-target="#slider-team" data-slide-to="0"></li>
+                <li data-target="#slider-team" data-slide-to="1"></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+<section class="alert-mdl bg-primary-darker padding-xs">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 wow-outer">
+        <h3 class="text-center text-white wow slideInDown"> <span>Почему он </span><span class="font-weight-bold">используется?</span></h3>
+      </div>
+    </div>
+    <div class="row d-flex mt-3 justify-content-center">
+      <div class="col-12 col-lg-6 wow-outer">
+        <p class="text-white text-center wow slideInDown">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.</p></p>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center wow-outer">
+        <button class="button button-winona mt-3 wow slideInDown" href="#">Бесплатная консультация</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="last-blog padding-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 wow-outer">
+        <h3 class="text-center wow fadeInDown">Почему он используется</h3>
+      </div>
+    </div>
+    <div class="row mt-75">
+      <div class="col-sm-12 col-lg-6 mr-b-20 wow-outer">
+        <div class="post wow fadeInLeft"><a class="blackout" href="#"><img class="w-100" src="images/2.jpg" alt="img"></a>
+          <h4 class="mt-3"><a href="#">Почему он используется?</a></h4>
+          <ul class="post-modern-meta d-flex">
+            <li>Гарольд Барнетт </li>
+            <li>
+              <time datetime="2018">Март 21, 2018 13:30</time>
+            </li>
+            <li><a href="#">Новости</a></li>
+          </ul>
+          <p class="mt-3">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст...</p></p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 r-b-20 wow-outer">
+        <div class="post wow fadeInLeft"><a class="blackout" href="#"><img class="w-100" src="images/3.jpg" alt="img"></a>
+          <h4 class="mt-3"><a href="#">Почему он используется? </a></h4>
+          <ul class="post-modern-meta d-flex">
+            <li>Гарольд Барнетт</li>
+            <li>
+              <time datetime="2018">Март 21, 2018 13:30</time>
+            </li>
+            <li><a href="#">Новости</a></li>
+          </ul>
+          <p class="mt-3">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст...</p></p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center wow-outer">
+        <button class="button button-primar mt-3 wow fadeInUp" href="#">Посмотреть все новости</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact-us bg-gray padding-xs">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-6 wow-outer">
+        <h3 class="text-center wow fadeInDown">Связаться с нами</h3>
+        <form action="#">
+          <div class="row">
+            <div class="col-12 col-lg-6 wow-outer">
+              <div class="group-form wow fadeInDown">
+                <label class="error" for="#">Имя</label>
+                <input class="error" type="text" value="error" placeholder="Имя">
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 wow-outer">
+              <div class="group-form wow fadeInDown">
+                <label for="#">Фамилия</label>
+                <input type="text" placeholder="Фамилия">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-6 wow-outer">
+              <div class="group-form wow fadeInDown">
+                <label for="#">Почта</label>
+                <input type="text" placeholder="Почта">
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 wow-outer">
+              <div class="group-form wow fadeInDown">
+                <label for="#">Адрес</label>
+                <input type="text" placeholder="Адрес">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 wow-outer">
+              <div class="group-form wow fadeInDown">
+                <label for="#">Сообщение</label>
+                <textarea name="" id="" cols="3" rows="3" placeholder="Сообщение"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-45">
+            <div class="col-12 d-flex align-items-center justify-content-center">
+              <div class="wow-outer">
+                <button class="button button-winona wow fadeInRight" href="#">Отправить</button>
+              </div><span class="ml-3 mr-3">или</span>
+              <div class="wow-outer">
+                <button class="button button-primar wow fadeInLeft" href="#"><i class="fab fa-facebook-messenger"></i><span class="ml-2">мессенджер</span></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact padding-xs">
+  <div class="container">
+    <div class="row">
+      <ul class="items">
+        <li class="wow-outer">
+          <div class="d-flex flex-column wow fadeInUp">
+            <div class="icon mb-3"><i class="fas fa-phone icon-md"></i></div><a class="link-default" href="tel:#">1-800-1234-567</a><a class="link-default" href="tel:#">1-800-1234-567</a>
+          </div>
+        </li>
+        <li class="wow-outer">
+          <div class="wow fadeInUp">
+            <div class="icon mb-3"><i class="fas fa-envelope icon-md"></i></div><a class="link-default" href="#">info@admin.org</a>
+          </div>
+        </li>
+        <li class="wow-outer">
+          <div class="wow fadeInUp">
+            <div class="icon mb-3"><i class="fas fa-map-marker-alt icon-md"></i></div><a class="link-default" href="#">Улица Правды 30, Витебск 210029</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <footer class="padding-lg">
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-4">
+      <h4>Давно выяснено</h4>
+      <p class="mt-30">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации.</p>
+    </div>
+    <div class="col-12 col-lg-4">
+      <h4>Где его взять?</h4>
+      <p class="mt-30 mb-1"><a href="#">Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</a></a></p>
+      <ul class="d-flex">
+        <li>Гарольд Барнетт</li>
+        <li> <a class="ml-3" href="#">2 дня назад</a></li>
+      </ul>
+      <p class="mb-1 mt-30"><a href="#">Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда</a></a></p>
+      <ul class="d-flex">
+        <li>Гарольд Барнетт</li>
+        <li> <a class="ml-3" href="#">2 дня назад</a></li>
+      </ul>
+    </div>
+    <div class="col-12 col-lg-4">
+      <h4>Галерея</h4>
+      <div class="container mt-30">
+        <div class="row">
+          <div class="col-3 gallery-item"><a href="#"><img src="https://livedemo00.template-help.com/wt_67881/images/galley-footer-1-150x150.jpg" alt="#"></a></div>
+          <div class="col-3 gallery-item"><a href="#"><img src="https://livedemo00.template-help.com/wt_67881/images/galley-footer-1-150x150.jpg" alt="#"></a></div>
+          <div class="col-3 gallery-item"><a href="#"><img src="https://livedemo00.template-help.com/wt_67881/images/galley-footer-1-150x150.jpg" alt="#"></a></div>
+          <div class="col-3 gallery-item"><a href="#"><img src="https://livedemo00.template-help.com/wt_67881/images/galley-footer-1-150x150.jpg" alt="#"></a></div>
+          <div class="col-3 gallery-item"><a href="#"><img src="https://livedemo00.template-help.com/wt_67881/images/galley-footer-1-150x150.jpg" alt="#"></a></div>
+          <div class="col-3 gallery-item"><a href="#"><img src="https://livedemo00.template-help.com/wt_67881/images/galley-footer-1-150x150.jpg" alt="#"></a></div>
+          <div class="col-3 gallery-item"><a href="#"><img src="https://livedemo00.template-help.com/wt_67881/images/galley-footer-1-150x150.jpg" alt="#"></a></div>
+          <div class="col-3 gallery-item"><a href="#"><img src="https://livedemo00.template-help.com/wt_67881/images/galley-footer-1-150x150.jpg" alt="#"></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex align-items-center">
+    <div class="col-12 col-lg-10">
+      <ul class="bottom-menu">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Продукция</a></li>
+        <li><a href="#">Решения</a></li>
+        <li><a href="#">О бренде</a></li>
+      </ul>
+    </div>
+    <div class="col-12 col-lg-2">
+      <ul class="social-icon d-flex justify-content-between">
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-google"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="footer-advanced"><a class="mr-t-20" href="#"><img src="images/logo_white.svg" height="39"></a><span class="mr-t-20">© 2019 Все права защищены.</span></div>
+  </div>
+</div>
+    </footer>
+  <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script></body>
+</html>
