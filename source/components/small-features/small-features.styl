@@ -1,7 +1,6 @@
 @import '../../pages/colors.styl'
 
 section.smallFeatures
-
     .box
         p 
             margin-top: 16px
@@ -9,3 +8,8 @@ section.smallFeatures
         .icon
             font-size: 36px;
             color: $main-color;
+
+@media only screen and (max-width: 760px)
+    section.smallFeatures
+        .box
+            margin-bottom: 20px;

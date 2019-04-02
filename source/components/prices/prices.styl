@@ -1,0 +1,31 @@
+@import '../../pages/colors.styl'
+    
+section.prices
+    .box-price
+        padding: 35px 30px;
+        border: 1px solid #aeb1be;
+        border-radius: 0;
+        transition: border .5s ease;
+
+        h5 
+            a
+                color: $text-color-bold;
+                font-weight: 300;
+
+        &:hover
+            border-color: #0095d9;
+            transition: border .5s ease;
+
+        .pricing-minimal-price
+            line-height: 1;
+            font-weight: 700;
+            letter-spacing: 0;
+            color: $text-color-bold
+            font-size: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #aeb1be;
+
+@media only screen and (max-width: 760px)
+    section.prices
+        .box-price
+            margin-bottom: 30px;

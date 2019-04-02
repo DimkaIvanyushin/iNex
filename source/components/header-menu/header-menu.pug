@@ -1,42 +1,173 @@
-.navbar.navbar-expand-md.main-menu
-    .container
-        .container-mobile-menu
-            button.navbar-toggler(
-                type="button" 
-                data-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" 
-                data-toggle="collapse"
-                aria-expanded="false" 
-                aria-label="Toggle navigation")
+mixin nav-bar(visible, fix, animation)
+    .navbar.navbar-expand-md.main-menu(class=fix)
+        .container
+            .container-mobile-menu
+                button.navbar-toggler(
+                    type="button" 
+                    data-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" 
+                    data-toggle="collapse"
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation")
 
-                i.fas.fa-bars.icon-md
+                    i.fas.fa-bars.icon-md
 
-            button.navbar-toggler(
-                type="button" 
-                data-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" 
-                data-toggle="collapse"
-                aria-expanded="false" 
-                aria-label="Toggle navigation 2")
+                img.d-md-none(src=require("../../resource/img/logo.svg") height="25" alt="logo")
 
-                i.fas.fa-ellipsis-v.icon-md
+                button.navbar-toggler(
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#menu-top-mobile"
+                    aria-controls="menu-top-mobile"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation 2")
 
-        .collapse.navbar-collapse#navbarSupportedContent
-            ul.navbar-nav.mr-auto
-                li.active.nav-item
-                    a.nav-link(href="#") Главная
+                    i.fas.fa-ellipsis-v.icon-md
 
-                li.nav-item.dropdown
-                    a.nav-link(href="#") Продукция
+            .d-md-none.d-xs-none
+                .collapse.navbar-collapse#menu-top-mobile
+                    .container.pb-3
+                        .row
+                            .col-12
+                                .contact.d-flex.align-items-center
+                                    .icon
+                                        i.fas.fa-phone.icon-md
+                                    
+                                    .info.ml-3
+                                        ul
+                                            li
+                                                a.link-default(href="tel:#") 1-800-1234-567
+                                            
+                                            li
+                                                a.link-default(href="tel:#") 1-800-1234-567
+                            .col-12
+                                .contact.d-flex.align-items-center
+                                    .icon
+                                        i.fas.fa-map-marker-alt.icon-md
+                    
+                                    .info.ml-3
+                                        ul
+                                            li
+                                                a.link-default(href="#") Улица Правды 30, Витебск 210029
+    
+                            .col-12.d-flex.justify-content-center
+                                button.button.button-primar Заказать звонок
 
-                li.nav-item
-                    a.nav-link(href="#") Решения
+            .collapse.navbar-collapse#navbarSupportedContent
+
+                .logo-box
+                    img.logo-dt.d-none.d-md-block(src=require("../../resource/img/logo.svg") class=visible height='20' alt='logo')
+
+                ul.navbar-nav.mr-auto(class=visible class=animation)
+                    li.active.nav-item
+                        a.nav-link(href="#") Главная
+
+
+                    li.nav-item.dropdown.position-static
+                        a.nav-link.dropdown-toggle#navbarDropdown(data-toggle="dropdown" href="#") Продукция
+                        .dropdown-menu(aria-labelledby="navbarDropdown")
+                            .mega-menu-container
+                                .container
+                                    .row
+                                        .col-12.col-md-3
+                                            .mega-menu-box
+                                                h5 
+                                                    a(href="#") Контроллеры
+
+                                                ul
+                                                    li  
+                                                        span.icon
+                                                            i.fas.fa-angle-right
+                                                        a(href="#") UlC-02
+                                                    li
+                                                        span.icon
+                                                            i.fas.fa-angle-right
+                                                        a(href="#") UlC-03
+                                        .col-12.col-md-3
+                                            .mega-menu-box
+                                                h5 
+                                                    a(href="#") Устройства связи
+
+                                                ul
+                                                    li
+                                                        span.icon
+                                                            i.fas.fa-angle-right
+                                                        a(href="#") 3G-модем
+                                                    li
+                                                        span.icon
+                                                            i.fas.fa-angle-right
+                                                        a(href="#") 3П-роутер
+                                        .col-12.col-md-3
+                                            .mega-menu-box
+                                                h5 
+                                                    a(href="#") Диспетчерскаие щиты
+
+                                                ul
+                                                    li
+                                                        span.icon
+                                                            i.fas.fa-angle-right
+                                                        a(href="#") Диспетчерский щит
+                                        
+                                        .col-12.col-md-3
+                                            .mega-menu-box
+                                                h5 
+                                                    a(href="#") Оборудование АУ
+
+                                                ul
+                                                    li
+                                                        span.icon
+                                                            i.fas.fa-angle-right
+                                                        a(href="#") Реклоузеры
+
+
+                                        .col-12.col-md-3
+                                            .mega-menu-box
+                                                h5 
+                                                    a(href="#") Светильники
+
+                                                ul
+                                                    li
+                                                        span.icon
+                                                            i.fas.fa-angle-right
+                                                        a(href="#") Светильники уличного освещения
+
+                                        .col-12.col-md-3
+                                            .mega-menu-box
+                                                h5 
+                                                    a(href="#") Контрольно-измерительные приборы
+
+                                                ul
+                                                    li
+                                                        span.icon
+                                                            i.fas.fa-angle-right
+                                                            
+                                                        a(href="#") Счётчик 1Ф электрической энергии
+
+                                                    li
+                                                        span.icon
+                                                            i.fas.fa-angle-right
+                                                        a(href="#") Счётчик 1Ф технического учёта
+
+
+                                        .col-12.col-md-3
+                                            .mega-menu-box
+                                                h5 
+                                                    a(href="#") Аналогово-цифровые преобразователи
+
+                                                ul
+                                                    li
+                                                        span.icon
+                                                            i.fas.fa-angle-right
+                                                        a(href="#") Аналогово-цифровые преобразователи
+                                        
+                    li.nav-item
+                        a.nav-link(href="#") Решения
+                    
+                    li.nav-item
+                        a.nav-link(href="#") О бренде
+                    
+                    li.nav-item
+                        a.nav-link(href="#") Контакты
                 
-                li.nav-item
-                    a.nav-link(href="#") О бренде
-                
-                li.nav-item
-                    a.nav-link(href="#") Контакты
-            
-            span.nav-item.search.mr-0.d-none.d-md-block
-                i.fas.fa-search
+                span.nav-item.search.d-none.d-md-block
+                    i.fas.fa-search

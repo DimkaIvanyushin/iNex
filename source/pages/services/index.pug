@@ -4,3 +4,145 @@ block title
 block main
     header
         include ../../components/header-menu/header-menu.pug
+        +nav-bar('show','fixed-top', 'none-animation')
+        //+nav-bar('show')
+
+    include ../../components/breadcrumbs/breadcrumbs.pug
+
+    section.service-info.padding-lg
+        .container
+            .row.d-flex.justify-content-between.flex-row-reverse
+            
+                .col-sm-12.col-lg-6.wow-outer
+
+                    .carousel.overflow-hidden.slide.wow.fadeInRight#service-view(data-ride="carousel" data-interval="false")
+                        .carousel-indicators
+                            span.active(data-target="#service-view" data-slide-to="0") 01
+                            span(data-target="#service-view" data-slide-to="1") 02
+                            span(data-target="#service-view" data-slide-to="2") 03
+
+                        .carousel-inner
+                            .carousel-item.active
+                                .h-100.d-flex.justify-content-center
+                                    img.h-100(src="https://www.owen.ru/uploads/2/pr110.jpg" alt="img")
+
+                                    
+                            .carousel-item
+                                .h-100.d-flex.justify-content-center
+                                    img.h-100(src="https://www.owen.ru/uploads/2/plk100.png" alt="img")
+
+                            .carousel-item
+                                .h-100.d-flex.justify-content-center
+                                    img.h-100(src="https://www.owen.ru/uploads/83/plk110-30_m02.png" alt="img")
+                          
+
+                        //- a.carousel-control-prev(href="#service-view" data-slide="prev")
+                        //-     span.carousel-control-prev-icon
+                    
+                        //- a.carousel-control-next(href="#service-view" data-slide="next")
+                        //-     span.carousel-control-next-icon
+                
+                .col-sm-12.col-lg-5.wow-outer.description
+                    h3.wow.slideInDown ULC-02
+                    
+                    .wow-outer.mt-3
+                        h5.wow.slideInDown  Серия КСО-298
+                    
+                    .wow-outer.mt-3
+                        p.wow.slideInDown Прием и распределение электрической энергии переменного трехфазного тока промышленной частоты 50 Гц напряжением 6(10) кВ с изолированной нейтралью. Применяется в распределительных устройствах 6 (10) кВ промышленных объектов, городских электрических сетей, систем электрификации железнодорожного транспорта, нефтегазовой отрасли и др.
+                            
+                    .wow-outer.mt-3
+                        button.button.button-winona.mt-3.wow.slideInDown(href="#") Где купить ?
+
+    section.tabs.padding-xs.bg-gray
+        .container
+            .row
+                .col-12.wow-outer
+                    h3.text-center.wow.slideInDown Технические характеристики ULC-02
+            .row.mt-5
+                .col-12.wow-outer
+               
+                    ul.nav.nav-tabs.wow.fadeInDown
+                        li.nav-item
+                            a.nav-link.active(data-toggle="tab" href="#home") Описание
+                        
+                        li.nav-item
+                            a.nav-link(data-toggle="tab" href="#menu1") Технические характеристики
+
+                        li.nav-item
+                            a.nav-link(data-toggle="tab" href="#menu2") Условные обозначения
+
+                        li.nav-item
+                            a.nav-link(data-toggle="tab" href="#menu3") Документация и ПО
+
+                    .tab-content.wow.fadeInLeft
+                        .container.tab-pane.active#home
+                            h5 Конструктивные особенности
+                            ul.mt-3
+                                li 
+                                    span Корпус и большинство деталей выполнены из оцинкованной стали, обеспечивающей необходимую коррозионную стойкость.
+                                li
+                                    span Простота и надежность конструкции.
+                                li 
+                                    span В соответствии с требованиями ГОСТ и ПУЭ безопасность эксплуатации КСО-298 обеспечивается системой встроенных механических блокировок.
+                                li
+                                    span Простота монтажа и наладки обеспечиваются удобным доступом к местам крепления шкафов КСО-298, кабельных и шинных присоединений.
+                                li
+                                    span Высокая надежность конструкции и входящего в состав КСО-298 оборудования сводит к минимуму затраты на ремонт и техническое обслуживание.
+                                li
+                                    span Возможность применения силовых выключателей отечественного и зарубежного производства обеспечивает гибкость решений.
+                                li
+                                    span Смотровые окна и дополнительное освещение камеры обеспечивают возможность визуального контроля внутреннего пространства КСО-298.
+                        
+                        .container.tab-pane.fade#menu1
+                            h5 Технические характеристики
+                            p Наименование параметра	Значение параметра Номинальный ток главных цепей и сборных шин, А	600; 1000 Номинальный ток отключения выключателя, кА	20 Номинальное напряжение, кВ	6 (10) Номинальное напряжение вспомогательных сетей, В	AD / CD 110В, 220В Степень защиты по ГОСТ 14254-96	IP31 Масса камер с выключателем (не более), кг	250 Габаритные размеры, мм, не более: ширина
+                        
+                        .container.tab-pane.fade#menu2
+                            h5 КСО-298-ENRG-ХХХХ-ХХ-ХХХ «Энергомера»
+                            p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+                        .container.tab-pane.fade#menu3
+                            h5 Документация
+                            p  Декларация о соответствии 
+                                a(href="#") PDF 469 Kb
+
+                            p Опросный лист
+                                a(href="#") Zip 142 Kb
+
+                            p Сетка главных цепей
+                                a(href="#") Zip 861 Kb
+                        
+    include ../../components/per-char/per-char.pug
+
+    section.alert-cta.bg-primary-darker.padding-xs 
+        .container
+            .row
+                .col-12.col-lg-8.d-flex.justify-content-center.align-items-center.wow-outer
+                    h4.text-white.text-center.wow.slideInRight 
+                        span Полное 
+                        span.font-weight-bold техническое 
+                        span описание изделия
+
+                .col-12.col-lg-4.d-flex.justify-content-center.align-items-center.mr-t-20.wow-outer
+                    button.button.button-winona.wow.slideInLeft(href="#") подробнее
+
+    section.solutions.padding-lg
+        .container
+            .row
+                .col-12.wow-outer
+                    h3.text-center.wow.slideInDown Решения на основе изделия
+
+            .row.mt-5.justify-content-center
+                each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                    .col-6.col-md-4.wow-outer
+                        .solutions-box.wow.fadeInLeft
+                            a(href="#")
+                                img(src="https://livedemo00.template-help.com/wt_67881/images/grid-layout-1-370x256.jpg", alt="#")
+
+                                .solutions-caption
+                                    span.solutions-caption-title Управление
+                                    span.solutions-caption-text Управление автоматическими воротами.
+                                
+    footer.padding-lg
+        include ../../components/footer-main/footer.pug

@@ -1,3 +1,5 @@
+@import '../../pages/colors.styl'
+    
 section.services
     .item
         img 
@@ -20,8 +22,14 @@ section.services
                 left: 0;
                 width: 100%;
                 height: 100%;
+                transition: background .5s ease;
 
             &:hover
-                
                 &:before
                     background: #2d37424d;
+                    transition: background .5s ease;
+
+@media only screen and (max-width: 760px)
+    section.services
+        .item
+            margin-bottom: 30px;

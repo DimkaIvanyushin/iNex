@@ -16,8 +16,8 @@ body
     font-weight: $text-weight;
 
 a:hover, a:focus, a:active {
-    color: $main-color !important;
     text-decoration: none;
+    transition: color .5s ease;
 }
 
 ul,li
@@ -62,41 +62,42 @@ h1, h2, h3, h4, h5, h6
     color: $text-color-bold;
     background-color: transparent;
     border-color: $main-color
-    transition: background .5s ease, color .5s ease;
+    transition: background .5s ease, color .5s ease, border .5s ease;
 
 .button-primar:hover
     color: #fff;
     background-color: $main-color
     border-color: $main-color
-    transition: background .5s ease, color .5s ease;
+    transition: background .5s ease, color .5s ease, border .5s ease;
 
 .button-winona
     color: #fff;
     background-color: $main-color
     border-color: $main-color
-    transition: background .5s ease, color .5s ease;
+    transition: background .5s ease, color .5s ease, border .5s ease;
 
 .button-winona:hover
     color: #fff !important;
     background-color: $main-color-hover
     border-color: $main-color-hover
-    transition: background .5s ease, color .5s ease;
+    transition: background .5s ease, color .5s ease, border .5s ease;
 
 .link-default, .link-default:active, .link-default:focus 
     color: $text-color;
     outline: none;
+    transition: color .5s ease;
 
 .icon-md
     color: $main-color 
     font-size: 1.3em;
 
-.section-lg 
+.padding-lg
     padding: 80px 0;
 
-.section-xs 
+.padding-xs 
     padding: 40px 0;
 
-section 
+section   
     h3 
         font-size: 36px;
         font-weight: 300;
@@ -106,3 +107,15 @@ section
 .wow-outer
     position: relative;
     overflow: hidden;
+
+@media only screen and (max-width: 760px)
+
+    .padding-lg
+        padding: 30px 0;
+
+    .padding-xs 
+        padding: 20px 0;
+
+    .button
+        padding: 10px 17px;
+        font-size: 13px;

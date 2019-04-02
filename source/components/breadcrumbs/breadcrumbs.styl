@@ -1,0 +1,52 @@
+@import '../../pages/colors.styl'
+
+section.breadcrumbs
+    background-image: url('https://livedemo00.template-help.com/wt_67881/images/breadcrumbs-image-1.jpg')
+    padding: 50px 0;
+
+    .content
+        height: 250px;
+        overflow: hidden;
+
+    h1
+        font-size: 68px;
+        line-height: 1.17647;
+        text-transform: uppercase;
+        margin-top: 20px;
+        margin-bottom: 0;
+        color: #fff
+
+    h6
+        padding-left: 70px;
+        font-size: 20px;
+        text-transform: uppercase
+        color: #aeb1be
+
+        &::before
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0.7em;
+            width: 50px;
+            border-bottom: 2px solid;
+
+    ul
+        display: flex;
+
+        li
+            margin-right: 25px;
+
+            &::after
+                margin-left: 25px;
+                content: '-';
+
+            &:last-child
+                &::after
+                    content: '';
+
+            a
+                font-weight: 400;
+                color: #aeb1be
+
+                &:hover
+                    color: #fff

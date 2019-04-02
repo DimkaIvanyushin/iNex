@@ -4076,15 +4076,25 @@ header .navbar.main-menu {
   z-index: 99;
   border-bottom: 1px solid #e8e9ee;
 }
-header .navbar.main-menu .logo-dt {
+header .navbar.main-menu .logo-box {
   position: absolute;
+  width: 100px;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+header .navbar.main-menu .logo-box .logo-dt {
+  position: absolute;
+  left: -100px;
   transition: left 0.5s ease;
 }
-header .navbar.main-menu .logo-dt.hide {
+header .navbar.main-menu .logo-box .logo-dt.hide {
   left: -100px;
   transition: left 1s ease;
 }
-header .navbar.main-menu .logo-dt.show {
+header .navbar.main-menu .logo-box .logo-dt.show {
   left: 0;
   transition: left 1s ease;
 }
@@ -4099,29 +4109,98 @@ header .navbar.main-menu .search:hover {
   color: #0095d9;
   transition: color 0.5s ease;
 }
-header .navbar.main-menu ul {
+header .navbar.main-menu ul.navbar-nav {
   width: 100%;
   display: flex;
-  position: relative;
-  transition: left 1s ease;
+  transition: padding-left 1s ease;
 }
-header .navbar.main-menu ul.hide {
-  left: 0px;
-  transition: left 1s ease;
+header .navbar.main-menu ul.navbar-nav.hide {
+  padding-left: 0px;
+  transition: padding-left 1s ease;
 }
-header .navbar.main-menu ul.show {
-  left: 200px;
-  transition: left 1s ease;
+header .navbar.main-menu ul.navbar-nav.show {
+  padding-left: 200px;
+  transition: padding-left 1s ease;
 }
-header .navbar.main-menu ul li {
+header .navbar.main-menu ul.navbar-nav.none-animation {
+  transition: none;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item {
   position: relative;
   margin-right: 55px;
 }
-header .navbar.main-menu ul li.active a {
+header .navbar.main-menu ul.navbar-nav li.nav-item.dropdown .dropdown-toggle::after {
+  display: none;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item.dropdown:hover .dropdown-menu {
+  height: max-content;
+  transition: height 0.3s ease;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item.dropdown:hover .dropdown-menu .mega-menu-container {
+  top: 0;
+  transition: top 0.5s ease;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu {
+  position: absolute;
+  display: block;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container {
+  position: relative;
+  top: -100px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  transition: top 0.5s ease;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box {
+  margin: 25px 0;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box h5 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box h5 a {
+  color: #2d3742;
+  transition: color 0.5s ease;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box h5 a:hover {
+  color: #0095d9;
+  transition: color 0.5s ease;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box ul li {
+  margin: 0;
+  padding: 0;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box ul li:hover span.icon {
+  color: #0095d9;
+  transition: color 0.5s ease;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box ul li span.icon {
+  color: #74757f;
+  margin-right: 10px;
+  transition: color 0.5s ease;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box ul li a {
+  color: #74757f;
+  transition: color 0.5s ease;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box ul li a:hover {
+  color: #2d3742;
+  transition: color 0.5s ease;
+}
+header .navbar.main-menu ul.navbar-nav li.nav-item.active a.nav-link {
   border-bottom: 2px solid #0095d9;
   color: #0095d9;
 }
-header .navbar.main-menu ul li a {
+header .navbar.main-menu ul.navbar-nav li.nav-item a.nav-link {
   position: relative;
   color: #2d3742;
   font-family: $text-family;
@@ -4133,7 +4212,7 @@ header .navbar.main-menu ul li a {
   border-bottom: 2px solid transparent;
   transition: color 0.5s ease;
 }
-header .navbar.main-menu ul li a::before {
+header .navbar.main-menu ul.navbar-nav li.nav-item a.nav-link::before {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -4144,10 +4223,10 @@ header .navbar.main-menu ul li a::before {
   transform: scale(0);
   transition: transform 0.5s ease;
 }
-header .navbar.main-menu ul li a:hover {
+header .navbar.main-menu ul.navbar-nav li.nav-item a.nav-link:hover {
   color: #0095d9;
 }
-header .navbar.main-menu ul li a:hover::before {
+header .navbar.main-menu ul.navbar-nav li.nav-item a.nav-link:hover::before {
   transform: scale(1);
   transition: transform 0.5s ease;
 }
@@ -4162,22 +4241,39 @@ header .navbar.main-menu ul li a:hover::before {
   header .contact {
     margin: 15px 0px;
   }
-  header .navbar.main-menu ul {
+  header .navbar.main-menu ul.navbar-nav {
     padding-left: 15px;
     padding-right: 15px;
     flex-direction: column;
     margin: 0;
   }
-  header .navbar.main-menu ul.hide {
-    left: 0px;
+  header .navbar.main-menu ul.navbar-nav.hide {
+    padding-left: 15px;
   }
-  header .navbar.main-menu ul.show {
-    left: 0px;
+  header .navbar.main-menu ul.navbar-nav.show {
+    padding-left: 15px;
   }
-  header .navbar.main-menu li {
+  header .navbar.main-menu li.nav-item {
     width: 100%;
   }
-  header .navbar.main-menu li.active a {
+  header .navbar.main-menu li.nav-item.dropdown:active .dropdown-menu {
+    height: 100%;
+    transition: height 0.2s ease;
+  }
+  header .navbar.main-menu li.nav-item.dropdown:active .dropdown-menu .mega-menu-container {
+    top: 0;
+    transition: top 0.5s ease;
+  }
+  header .navbar.main-menu li.nav-item .dropdown-menu {
+    position: relative !important;
+  }
+  header .navbar.main-menu li.nav-item .dropdown-menu .mega-menu-box {
+    margin: 10px 0 !important;
+  }
+  header .navbar.main-menu li.nav-item .dropdown-menu .mega-menu-box ul {
+    display: none;
+  }
+  header .navbar.main-menu li.nav-item.active a {
     border-bottom: none !important;
   }
 }

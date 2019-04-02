@@ -1,6 +1,20 @@
 @import '../../pages/colors.styl'
 
-header
+header 
+    .top-menu
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .contact .icon
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid #e8e9ee;
+            color: $main-color;
+            min-width: 48px;
+            min-height: 48px;
+
     .navbar.main-menu
         top: 0;
         width: 100%;
@@ -10,19 +24,131 @@ header
         z-index: 99;
         border-bottom: 1px solid #e8e9ee;
 
-        ul
-            width: 100%;
+        .logo-box
+            position: absolute;
+            width: 100px;
+            height: 66px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; 
+        
+            .logo-dt
+                position: absolute;
+                left: -100px;
+                transition: left .5s ease;
 
-            li
+                &.hide
+                    left: -100px;
+                    transition: left 1s ease;
+
+                &.show
+                    left: 0;
+                    transition: left 1s ease;
+
+        .search
+            color: $text-color-bold
+            cursor: pointer
+            position: relative;
+            z-index: 99;
+            transition: color .5s ease;
+
+            &:hover
+                color: $main-color;
+                transition: color .5s ease;
+
+        ul.navbar-nav
+            width: 100%;
+            display: flex;
+            transition: padding-left 1s ease;
+
+            &.hide
+                padding-left: 0px;
+                transition: padding-left 1s ease;
+
+            &.show
+                padding-left: 200px;
+                transition: padding-left 1s ease;
+
+            &.none-animation
+                transition: none;
+
+            li.nav-item
                 position: relative;
                 margin-right: 55px;
+    
+                &.dropdown
+                    .dropdown-toggle::after 
+                        display: none;
+                    
+                    // &:hover
+                    //     .dropdown-menu
+                    //         .mega-menu-container
+                    //             top: 0;                            
+                    //             transition: top 0.5s ease;
 
+                .dropdown-menu
+                    position: absolute;
+                    display:block;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: fit-content;
+                    border-radius: 0;
+                    border: none;
+                    background: transparent;
+                    overflow: hidden;
+
+                    .mega-menu-container
+                        position: relative;
+                        top: -100%;
+                        background: #fff;
+                        border-bottom: 1px solid #e0e0e0;
+                        transition: top 0.5s ease;
+
+                        .mega-menu-box
+                            margin: 25px 0;
+
+                            h5
+                                text-transform: uppercase;
+                                font-size: 16px;
+                                
+                                a
+                                    color: $text-color-bold;
+                                    transition: color 0.5s ease;
+
+                                    &:hover
+                                        color: $main-color;
+                                        transition: color 0.5s ease;
+
+                            ul
+                                li
+                                    margin: 0;
+                                    padding: 0;
+                                    
+                                    &:hover
+                                        span.icon
+                                            color: $main-color;
+                                            transition: color 0.5s ease;
+
+                                    span.icon
+                                        color: $text-color;
+                                        margin-right: 10px;
+                                        transition: color 0.5s ease;
+
+                                    a
+                                        color: $text-color;
+                                        transition: color 0.5s ease;
+
+                                        &:hover
+                                            color: $text-color-bold;
+                                            transition: color 0.5s ease;
+                        
                 &.active
-                    a
-                        border-bottom: 2px solid $main-color;
-                        color: $main-color;
-
-                a
+                        a.nav-link
+                            border-bottom: 2px solid $main-color;
+                            color: $main-color;
+                a.nav-link
                     position: relative
                     color: $text-color-bold;
                     font-family: $text-family;
@@ -46,13 +172,64 @@ header
                         transition: transform .5s ease;
 
                     &:hover
+                        color: $main-color;
+                
                         &::before
                             transform: scale(1);
                             transition: transform .5s ease;
 
-        .search
-            color: $text-color-bold
-            cursor: pointer
 
-            &:hover
-                color: $main-color;
+@media only screen and (max-width: 760px)
+
+    header
+
+        .container-mobile-menu
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0px;
+            width: 100%;
+
+        .contact
+            margin: 15px 0px;
+
+        .navbar.main-menu
+            ul.navbar-nav
+                padding-left: 15px;
+                padding-right: 15px;
+                flex-direction: column;
+                margin: 0;
+
+                &.hide
+                    padding-left: 15px;
+
+                &.show
+                    padding-left: 15px;
+
+                
+            li.nav-item
+                width: 100%;
+
+                &.dropdown                
+                    &:active
+                        .dropdown-menu
+                            
+                            height: 100%;
+                            transition: height 0.2s ease;
+
+                            .mega-menu-container
+                                top: 0;                            
+                                transition: top 0.5s ease;
+
+                .dropdown-menu
+                    position: relative !important;
+
+                    .mega-menu-box
+                        margin: 10px 0 !important;
+
+                        ul
+                            display: none;
+                        
+                &.active            
+                    a
+                        border-bottom: none !important;

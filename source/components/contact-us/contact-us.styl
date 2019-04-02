@@ -1,0 +1,39 @@
+@import '../../pages/colors.styl'
+    
+section.contact-us
+    .group-form
+        display: flex;
+        flex-direction: column;
+
+        label
+            margin-bottom: 4px;
+            font-size: 14px;
+            color: #aeb1be;
+            cursor: pointer;
+
+            &.error
+                color: $error-color;
+
+        input, textarea
+            width: 100%;
+            padding: 11px 19px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: $text-color-bold;
+            background-color: #fff;
+            border-radius: 0;
+            border: 1px solid #c5c6cd;
+            outline: none;
+            transition-animate()
+
+            &:focus, &:hover
+                border-color: $main-color;
+                transition-animate()
+
+            &::placeholder
+                color: #aeb1be
+
+            &.error
+                border-color: $error-color;

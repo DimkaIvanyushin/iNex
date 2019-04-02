@@ -1,0 +1,98 @@
+ @import '../../pages/colors.styl'
+ footer
+    color: #aeb1be;
+    background-color: $bg-color-footer
+
+    h4
+        color: #aeb1be;
+        font-weight: 300;
+
+    a
+        color: #fff;
+
+        &:hover
+            color: #aeb1be !important;
+
+    ul 
+        li
+            color: $text-color
+            font-size: 16px;
+
+            a
+                color: $text-color
+
+                &:hover
+                    color: #fff;
+
+    .gallery-item
+        padding: 0;
+        padding-right: 10px;
+        padding-bottom: 10px;
+
+        a
+            display: block;
+            position: relative;
+            
+            &:hover
+                &::after
+                    background: $main-color;
+                    transition: background .5s ease;
+                    
+            &::after
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;           
+                background: transparent;
+                opacity: 0.5;
+                transition: background .5s ease;
+
+            img 
+                width: 100%
+
+    ul.bottom-menu
+        display: flex;
+        margin: 35px 0;
+
+        li
+            margin-right: 50px;
+            a
+                color: #fff;
+                text-transform: uppercase;
+                font-family: $text-family;
+                font-weight: 400;
+                font-size: 14px;
+
+    .footer-advanced
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 35px;
+        border-top: 1px solid #74757f;
+
+    ul.social-icon li a 
+        font-size: 20px
+
+
+@media only screen and (max-width: 760px)
+
+     footer
+        ul.bottom-menu 
+            display: flex;
+            margin: 35px 0;
+            flex-direction: column;
+
+            li
+                margin-top: 15px;
+                margin-right: 0;
+                text-align: center;
+
+        .footer-advanced
+            display: flex;
+            justify-content: space-between;
+            border: none;
+            align-items: center;
+            padding-top: 15px;
+            flex-direction: column;

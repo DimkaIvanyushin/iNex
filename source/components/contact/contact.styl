@@ -1,0 +1,23 @@
+@import '../../pages/colors.styl'
+    
+section.contact
+    ul.items
+        display: flex;
+        justify-content: space-between;
+        width:100%;
+
+        li
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-right: 30px;
+            text-align: center;
+            padding-left: 30px;
+            border-right: 1px solid #deef7f;
+
+            &:first-child
+                border-left: 1px solid #deef7f;
+
+            .icon
+                color: $main-color;

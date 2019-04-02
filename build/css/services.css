@@ -238,21 +238,22 @@ section.tabs ul.nav.nav-tabs li.nav-item a.nav-link {
 section.tabs ul.nav.nav-tabs li.nav-item a.nav-link::before {
   content: '';
   position: absolute;
-  left: -100%;
   bottom: 0;
   background: #0095d9;
   width: 100%;
   height: 1px;
-  transition: left 0.5s ease;
+  transform: scale(0);
+  transition: transform 0.5s ease, color 0.5s ease;
 }
 section.tabs ul.nav.nav-tabs li.nav-item a.nav-link:hover,
 section.tabs ul.nav.nav-tabs li.nav-item a.nav-link.active {
   color: #2d3742;
+  transition: color 0.5s ease;
 }
 section.tabs ul.nav.nav-tabs li.nav-item a.nav-link:hover::before,
 section.tabs ul.nav.nav-tabs li.nav-item a.nav-link.active::before {
-  left: 0;
-  transition: left 0.5s ease;
+  transform: scale(1);
+  transition: transform 0.5s ease;
 }
 section.tabs ul.nav.nav-tabs li.nav-item a.nav-link.active {
   color: #2d3742;
@@ -265,6 +266,14 @@ section.tabs ul.nav.nav-tabs li.nav-item a.nav-link.active {
     justify-content: center;
     align-items: center;
     text-align: justify;
+  }
+  section.tabs ul.nav.nav-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+    margin-bottom: 20px;
   }
   section.tabs .tab-content {
     padding: 20px 0;

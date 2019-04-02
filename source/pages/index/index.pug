@@ -6,18 +6,30 @@ block main
     header
         include ../../components/header-top/header-top.pug
         include ../../components/header-menu/header-menu.pug
+        +nav-bar('hide','')
+    
+    include ../../components/slider/slider.pug
 
-    section.slider
-        include ../../components/slider/slider.pug
+    include ../../components/about-us/about-us.pug
 
-    sectoin.aboutUs
-        include ../../components/about-us/about-us.pug
+    include ../../components/small-features/small-features.pug
 
-    section.smallFeatures
-        include ../../components/small-features/small-features.pug
+    include ../../components/alert-cta/alert-cta.pug
 
-    section.alertCTA
-        include ../../components/alert-cta/alert-cta.pug
+    include ../../components/services/services.pug
 
-    section.services
-        include ../../components/services/services.pug
+    include ../../components/prices/prices.pug
+
+    include ../../components/recall/recall.pug
+    +recall("Отзывы")
+
+    include ../../components/alert-mdl/alert-mdl.pug
+
+    include ../../components/last-blog/last-blog.pug
+
+    include ../../components/contact-us/contact-us.pug
+
+    include ../../components/contact/contact.pug
+
+    footer.padding-lg
+        include ../../components/footer-main/footer.pug
