@@ -81,7 +81,15 @@ header
                     .dropdown-toggle::after 
                         display: none;                        
 
+                &:hover
+                    .dropdown-menu
+                        visibility: visible;
+                        opacity: 1;
+                        transition: visibility 0.5s, opacity 0.5s ease;
+                        
                 .dropdown-menu
+                    display block
+                    visibility: hidden;
                     position: absolute;
                     margin: 0;
                     padding: 0;
@@ -89,6 +97,8 @@ header
                     border-radius: 0;
                     border: none;
                     overflow: hidden;
+                    opacity: 0;
+                    transition: visibility 0.5s, opacity 0.5s ease;
 
                     .mega-menu-container
                         position: relative;
@@ -127,10 +137,10 @@ header
 
                                     a
                                         color: $text-color;
-                                        transition: color 0.5s ease;
+                                        transition: color 1s ease;
 
                                         &:hover
-                                            color: $text-color-bold;
+                                            color: $main-color;
                                             transition: color 0.5s ease;
                         
                 &.active
@@ -202,7 +212,6 @@ header
                 &.dropdown                
                     &:active
                         .dropdown-menu
-                            
                             height: 100%;
                             transition: height 0.2s ease;
 

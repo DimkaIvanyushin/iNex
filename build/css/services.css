@@ -98,6 +98,9 @@ h6 {
 .padding-xs {
   padding: 40px 0;
 }
+.text-main {
+  color: #0095d9;
+}
 section h3 {
   font-size: 36px;
   font-weight: 300;
@@ -128,14 +131,6 @@ section.service-info .carousel.slide .carousel-inner .carousel-item {
   height: 350px;
   overflow: hidden;
   cursor: zoom-in;
-}
-section.service-info .carousel.slide .carousel-inner .carousel-item img {
-  transform: scale(1);
-  transition: transform 1s ease;
-}
-section.service-info .carousel.slide .carousel-inner .carousel-item:hover img {
-  transform: scale(1.1);
-  transition: transform 1s ease;
 }
 section.service-info .carousel.slide .carousel-indicators {
   display: flex;
@@ -185,6 +180,10 @@ section.solutions .solutions-box {
 section.solutions .solutions-box a {
   display: flex;
   position: relative;
+  height: 256px;
+}
+section.solutions .solutions-box a img {
+  width: 100%;
 }
 section.solutions .solutions-box a .solutions-caption {
   position: absolute;
@@ -219,7 +218,7 @@ section.tabs .tab-content .tab-pane {
   padding: 0;
 }
 section.tabs .tab-content .tab-pane ul li {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 section.tabs ul.nav.nav-tabs li.nav-item {
   position: relative;
@@ -227,7 +226,7 @@ section.tabs ul.nav.nav-tabs li.nav-item {
 section.tabs ul.nav.nav-tabs li.nav-item a.nav-link {
   position: relative;
   padding: 10px 0;
-  margin-right: 20px;
+  margin-right: 40px;
   font-size: 20px;
   color: #74757f;
   border: none;
@@ -245,12 +244,13 @@ section.tabs ul.nav.nav-tabs li.nav-item a.nav-link::before {
   transform: scale(0);
   transition: transform 0.5s ease, color 0.5s ease;
 }
-section.tabs ul.nav.nav-tabs li.nav-item a.nav-link:hover,
+section.tabs ul.nav.nav-tabs li.nav-item a.nav-link:hover {
+  color: #2d3742;
+}
 section.tabs ul.nav.nav-tabs li.nav-item a.nav-link.active {
   color: #2d3742;
   transition: color 0.5s ease;
 }
-section.tabs ul.nav.nav-tabs li.nav-item a.nav-link:hover::before,
 section.tabs ul.nav.nav-tabs li.nav-item a.nav-link.active::before {
   transform: scale(1);
   transition: transform 0.5s ease;
@@ -291,6 +291,7 @@ section.tabs ul.nav.nav-tabs li.nav-item a.nav-link.active {
 }
 section.breadcrumbs {
   background-image: url("https://livedemo00.template-help.com/wt_67881/images/breadcrumbs-image-1.jpg");
+  background-size: cover;
   padding: 50px 0;
 }
 section.breadcrumbs .content {
@@ -314,7 +315,7 @@ section.breadcrumbs h6 {
 section.breadcrumbs h6::before {
   content: '';
   position: absolute;
-  left: 15px;
+  left: 0;
   top: 0.7em;
   width: 50px;
   border-bottom: 2px solid;
@@ -338,6 +339,20 @@ section.breadcrumbs ul li a {
 }
 section.breadcrumbs ul li a:hover {
   color: #fff;
+}
+@media only screen and (max-width: 760px) {
+  section.breadcrumbs ul {
+    flex-direction: column;
+  }
+  section.breadcrumbs ul li {
+    margin-bottom: 5px;
+  }
+  section.breadcrumbs ul li::after {
+    content: '';
+  }
+  section.breadcrumbs ul li::before {
+    content: '-';
+  }
 }
 section.per-char .title p {
   margin: 30px 0;

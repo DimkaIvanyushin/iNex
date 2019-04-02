@@ -4132,33 +4132,28 @@ header .navbar.main-menu ul.navbar-nav li.nav-item {
 header .navbar.main-menu ul.navbar-nav li.nav-item.dropdown .dropdown-toggle::after {
   display: none;
 }
-header .navbar.main-menu ul.navbar-nav li.nav-item.dropdown:hover .dropdown-menu {
-  height: max-content;
-  transition: height 0.3s ease;
-}
-header .navbar.main-menu ul.navbar-nav li.nav-item.dropdown:hover .dropdown-menu .mega-menu-container {
-  top: 0;
-  transition: top 0.5s ease;
+header .navbar.main-menu ul.navbar-nav li.nav-item:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.5s, opacity 0.5s ease;
 }
 header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu {
-  position: absolute;
   display: block;
-  height: 0;
+  visibility: hidden;
+  position: absolute;
   margin: 0;
   padding: 0;
   width: 100%;
   border-radius: 0;
   border: none;
-  background: transparent;
   overflow: hidden;
-  transition: height 0.3s ease;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease;
 }
 header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container {
   position: relative;
-  top: -100px;
   background: #fff;
-  border-bottom: 1px solid #e0e0e0;
-  transition: top 0.5s ease;
+  border-bottom: 1px solid #cbced0;
 }
 header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box {
   margin: 25px 0;
@@ -4190,10 +4185,10 @@ header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-con
 }
 header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box ul li a {
   color: #74757f;
-  transition: color 0.5s ease;
+  transition: color 1s ease;
 }
 header .navbar.main-menu ul.navbar-nav li.nav-item .dropdown-menu .mega-menu-container .mega-menu-box ul li a:hover {
-  color: #2d3742;
+  color: #0095d9;
   transition: color 0.5s ease;
 }
 header .navbar.main-menu ul.navbar-nav li.nav-item.active a.nav-link {
