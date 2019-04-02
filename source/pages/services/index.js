@@ -21,5 +21,5 @@ import '../../components/recall/recall.styl'
 import '../../components/per-char/per-char.styl'
 import '../../components/footer-main/footer.styl';
 
-import '../../components/header-menu/header-menu.js';
+// import '../../components/header-menu/header-menu.js';
 new WOW().init();

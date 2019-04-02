@@ -49,7 +49,7 @@ block main
                         h5.wow.slideInDown  Серия КСО-298
                     
                     .wow-outer.mt-3
-                        p.wow.slideInDown Прием и распределение электрической энергии переменного трехфазного тока промышленной частоты 50 Гц напряжением 6(10) кВ с изолированной нейтралью. Применяется в распределительных устройствах 6 (10) кВ промышленных объектов, городских электрических сетей, систем электрификации железнодорожного транспорта, нефтегазовой отрасли и др.
+                        p.text-justify.wow.slideInDown Щиты (панели) ЩО-70 предназначены для комплектования распределительных устройств (РУ) переменного трехфазного тока частотой 50 Гц в сетях с глухозаземленной нейтралью, напряжением 0,4 кВ и служат для приема и распределения электроэнергии, защиты от перегрузок и токов короткого замыкания, и используются для установки в распределительных сетях как в четырехпроводном, так и пятипроводном исполнениях с рабочим нулевым и защитным заземляющим проводниками.
                             
                     .wow-outer.mt-3
                         button.button.button-winona.mt-3.wow.slideInDown(href="#") Где купить ?
@@ -75,23 +75,29 @@ block main
                         li.nav-item
                             a.nav-link(data-toggle="tab" href="#menu3") Документация и ПО
 
-                    .tab-content.wow.fadeInLeft
+                    .tab-content.wow-outer
                         .container.tab-pane.active#home
-                            h5 Конструктивные особенности
                             ul.mt-3
-                                li 
+                                li.wow.fadeInLeft 
+                                    i.fas.fa-chevron-right.mr-3.text-main
                                     span Корпус и большинство деталей выполнены из оцинкованной стали, обеспечивающей необходимую коррозионную стойкость.
-                                li
+                                li.wow.fadeInLeft
+                                    i.fas.fa-chevron-right.mr-3.text-main
                                     span Простота и надежность конструкции.
-                                li 
+                                li.wow.fadeInLeft
+                                    i.fas.fa-chevron-right.mr-3.text-main
                                     span В соответствии с требованиями ГОСТ и ПУЭ безопасность эксплуатации КСО-298 обеспечивается системой встроенных механических блокировок.
-                                li
+                                li.wow.fadeInLeft
+                                    i.fas.fa-chevron-right.mr-3.text-main
                                     span Простота монтажа и наладки обеспечиваются удобным доступом к местам крепления шкафов КСО-298, кабельных и шинных присоединений.
-                                li
+                                li.wow.fadeInLeft
+                                    i.fas.fa-chevron-right.mr-3.text-main
                                     span Высокая надежность конструкции и входящего в состав КСО-298 оборудования сводит к минимуму затраты на ремонт и техническое обслуживание.
-                                li
+                                li.wow.fadeInLeft
+                                    i.fas.fa-chevron-right.mr-3.text-main
                                     span Возможность применения силовых выключателей отечественного и зарубежного производства обеспечивает гибкость решений.
-                                li
+                                li.wow.fadeInLeft
+                                    i.fas.fa-chevron-right.mr-3.text-main
                                     span Смотровые окна и дополнительное освещение камеры обеспечивают возможность визуального контроля внутреннего пространства КСО-298.
                         
                         .container.tab-pane.fade#menu1
@@ -134,15 +140,33 @@ block main
                     h3.text-center.wow.slideInDown Решения на основе изделия
 
             .row.mt-5.justify-content-center
-                each val in [1, 2, 3, 4, 5, 6, 7, 8, 9]
-                    .col-6.col-md-4.wow-outer
-                        .solutions-box.wow.fadeInLeft
-                            a(href="#")
-                                img(src="https://livedemo00.template-help.com/wt_67881/images/grid-layout-1-370x256.jpg", alt="#")
+                
+                .col-12.col-md-4.wow-outer
+                    .solutions-box.wow.fadeInLeft
+                        a(href="#")
+                            img(src=require("../../resource/img/services/service-1.jpg"), alt="#")
 
-                                .solutions-caption
-                                    span.solutions-caption-title Управление
-                                    span.solutions-caption-text Управление автоматическими воротами.
+                            .solutions-caption
+                                span.solutions-caption-title Энергетика
+                                span.solutions-caption-text Система телемеханики
+
+                .col-12.col-md-4.wow-outer
+                    .solutions-box.wow.fadeInLeft
+                        a(href="#")
+                            img(src=require("../../resource/img/services/service-2.jpg"), alt="#")
+
+                            .solutions-caption
+                                span.solutions-caption-title Промышленность
+                                span.solutions-caption-text Промышленность
+
+                .col-12.col-md-4.wow-outer
+                    .solutions-box.wow.fadeInLeft
+                        a(href="#")
+                            img(src=require("../../resource/img/services/service-3.jpg"), alt="#")
+
+                            .solutions-caption
+                                span.solutions-caption-title Офисы и административные здания
+                                span.solutions-caption-text Умное здание
                                 
     footer.padding-lg
         include ../../components/footer-main/footer.pug
