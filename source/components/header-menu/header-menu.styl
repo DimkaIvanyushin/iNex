@@ -77,15 +77,35 @@ header
                 position: relative;
                 margin-right: 55px;
     
+                a
+                    span.chevron
+                        font-size: 11px;
+                        color: #454e58;
+                        margin-left: 10px;
+
+                        svg 
+                            transform: rotate(0);
+                            transition: color .5s ease, transform .5s ease;
+                    
                 &.dropdown
                     .dropdown-toggle::after 
                         display: none;                        
 
                 &:hover
+                    span.chevron
+                        svg 
+                            color: $main-color;
+                            transform: rotate(180deg);
+                            transition: color .5s ease, transform .5s ease;
+
                     .dropdown-menu
                         visibility: visible;
                         opacity: 1;
-                        transition: visibility 0.5s, opacity 0.5s ease;
+                        transition: visibility 0.5s ease, opacity 0.5s ease;
+
+                        .mega-menu-container
+                            top: 0;
+                            transition: top 0.5s ease;
                         
                 .dropdown-menu
                     display block
@@ -98,12 +118,17 @@ header
                     border: none;
                     overflow: hidden;
                     opacity: 0;
-                    transition: visibility 0.5s, opacity 0.5s ease;
+                    height: -webkit-fill-available;
+                    background: #000000c7;
+                                        
+                    transition: visibility 0.5s ease, opacity 0.5s ease 0.1s;
 
                     .mega-menu-container
                         position: relative;
+                        top: -100%;
                         background: #fff;
                         border-bottom: 1px solid #cbced0;
+                        transition: top 0.5s ease;
 
                         .mega-menu-box
                             margin: 25px 0;
@@ -124,7 +149,8 @@ header
                                 li
                                     margin: 0;
                                     padding: 0;
-                                    
+                                    line-height: 25px;
+
                                     &:hover
                                         span.icon
                                             color: $main-color;
@@ -137,11 +163,14 @@ header
 
                                     a
                                         color: $text-color;
-                                        transition: color 1s ease;
+                                        margin-left: 0px;
+                                        transition: color 0.5s ease, margin-left 0.5s ease;
+
 
                                         &:hover
+                                            margin-left: 3px;
                                             color: $main-color;
-                                            transition: color 0.5s ease;
+                                            transition: color 0.5s ease, margin-left 0.5s ease;
                         
                 &.active
                         a.nav-link
@@ -209,17 +238,21 @@ header
             li.nav-item
                 width: 100%;
 
-                &.dropdown                
-                    &:active
+                &.dropdown 
+
+                    &:active, &:hover
                         .dropdown-menu
                             height: 100%;
                             transition: height 0.2s ease;
+                            display: block !important;
 
                             .mega-menu-container
                                 top: 0;                            
                                 transition: top 0.5s ease;
 
                 .dropdown-menu
+                    display: none !important;
+                    height: auto;
                     position: relative !important;
 
                     .mega-menu-box
