@@ -1,0 +1,112 @@
+extends ../base
+block title
+    | Services-list page
+block main
+    header
+        include ../../components/header-menu/header-menu.pug
+        +nav-bar('show','fixed-top', 'none-animation')
+
+    include ../../components/breadcrumbs/breadcrumbs.pug
+    +breadcrumbs("Продукция", "Продукция")
+
+    include ../../components/about-us/about-us.pug
+    +aboutUs('flex-row-reverse','bg-gray')
+
+    include ../../components/services-all/services-all.pug
+
+    section.about-us-img.padding-xl(style="background: url(https://livedemo00.template-help.com/wt_67881/images/call-to-action-2-1920x584.jpg)")
+        .container                
+                .col-sm-12.offset-lg-6.col-lg-5.text-justify
+                    .wow-outer
+                        h4.wow.fadeInDown Сделайте первый шаг к
+                    .wow-outer
+                        h3.wow.fadeInDown Успеху Вашей Компании
+                    
+                    .wow-outer
+                        p.wow.fadeInDown Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона."
+                    
+                    .wow-outer
+                        button.button.button-winona.mt-3.wow.fadeInDown(href="#") Узнать больше
+
+    section.recall-big.padding-lg
+        .container
+            .row
+                .col-12.wow-outer
+                    h3.text-center.wow.slideInUp Отзывы
+
+            .carousel.slide#slider-team.wow-outer.mt-45(data-ride="carousel" data-interval="false")
+
+                .carousel-inner.wow.fadeInDown
+                    .carousel-item.active
+                        .row.d-flex.justify-content-center
+                            .col-12.col-lg-6
+                                .team
+                                    span.quote
+                                        i.fas.fa-quote-left
+                                    p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
+
+                                    .title.d-flex
+                                        .avatar
+                                            img(src=require("../../resource/img/avatar/avatar-1.jpg")
+                                                width="50" class="rounded-circle" alt="")
+
+                                        .team_info.ml-3
+                                            span.name Гарольд Барнетт
+                                            p.dev Региональный управляющий
+
+                            .col-12.col-lg-6
+                                .team
+                                    span.quote
+                                        i.fas.fa-quote-left
+                                    p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
+
+                                    .title.d-flex
+                                        .avatar
+                                            img(src=require("../../resource/img/avatar/avatar-2.jpg")
+                                                width="50" class="rounded-circle" alt="")
+
+
+                                        .team_info.ml-3
+                                            span.name Гарольд Барнетт
+                                            p.dev Региональный управляющий
+
+                    .carousel-item
+                        .row.d-flex.justify-content-center
+                            .col-12.col-lg-6
+                                .team
+                                    span.quote
+                                        i.fas.fa-quote-left
+                                    p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
+
+                                    .title.d-flex
+                                        .avatar
+                                            img(src=require("../../resource/img/avatar/avatar-2.jpg")
+                                                width="50" class="rounded-circle" alt="")
+
+
+                                        .team_info.ml-3
+                                            span.name Гарольд Барнетт
+                                            p.dev Региональный управляющий
+                            
+                            .col-12.col-lg-6
+                                .team
+                                    span.quote
+                                        i.fas.fa-quote-left
+                                    p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона.
+
+                                    .title.d-flex
+                                        .avatar
+                                            img(src=require("../../resource/img/avatar/avatar-3.jpg")
+                                                width="50" class="rounded-circle" alt="")
+
+
+                                        .team_info.ml-3
+                                            span.name Гарольд Барнетт
+                                            p.dev Региональный управляющий
+                            
+                ul.carousel-indicators
+                    li.active(data-target="#slider-team" data-slide-to="0")
+                    li(data-target="#slider-team" data-slide-to="1")
+
+    footer.padding-lg
+        include ../../components/footer-main/footer.pug

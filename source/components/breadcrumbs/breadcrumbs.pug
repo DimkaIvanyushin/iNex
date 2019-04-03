@@ -1,17 +1,18 @@
-section.breadcrumbs
-    .container
-        .row.content.d-flex.align-items-center
-            .col-12
-                .wow-outer
-                    h6.wow.fadeInDown контроллеры
-                .wow-outer
-                    h1.wow.fadeInDown(data-wow-delay="0.4s") ulc-02
-        .row
-            .col-12.wow-outer
-                ul.wow.fadeInDown(data-wow-delay="0.8s")
-                    li 
-                        a(href="#") Главная
-                    li 
-                        a(href="#") Контроллеры
-                    li 
-                        a(href="#") ULC-02
+mixin breadcrumbs(title, desc)
+    section.breadcrumbs
+        .container
+            .row.content.d-flex.align-items-center
+                .col-12
+                    .wow-outer
+                        h6.wow.fadeInDown=title
+                    .wow-outer
+                        h1.wow.fadeInDown(data-wow-delay="0.4s")=desc
+            .row
+                .col-12.wow-outer
+                    ul.wow.fadeInDown(data-wow-delay="0.8s")
+                        li 
+                            a(href="#") Главная
+                        li 
+                            a(href="#") Контроллеры
+                        li 
+                            a(href="#") ULC-02

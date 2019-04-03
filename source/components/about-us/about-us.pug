@@ -1,17 +1,18 @@
-section.aboutUs.padding-lg
-    .container
-        .row.d-flex.justify-content-between
-            .col-sm-12.col-lg-6.overflow-hidden
-                img.w-100.wow.slideInLeft(src=require("../../resource/img/about.jpg") alt="img")
-            
-            .col-sm-12.col-lg-5.mr-t-20.wow-outer
-                h3.wow.slideInDown Почему он используется?
+mixin aboutUs(reverce, bg_color)
+    section.aboutUs.padding-lg(class=bg_color)
+        .container
+            .row.d-flex.justify-content-between(class=reverce)
+                .col-sm-12.col-lg-6.overflow-hidden
+                    img.w-100.wow.slideInLeft(src=require("../../resource/img/about.jpg") alt="img")
                 
-                .wow-outer
-                    p.mt-30.wow.slideInDown Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона."
-                
-                .wow-outer
-                    p.wow.slideInDown Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.
+                .col-sm-12.col-lg-5.mr-t-20.wow-outer.text-justify
+                    h3.wow.slideInDown Почему он используется?
+                    
+                    .wow-outer
+                        p.mt-30.wow.slideInDown Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона."
+                    
+                    .wow-outer
+                        p.wow.slideInDown Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.
 
-                .wow-outer
-                    button.button.button-winona.mt-3.wow.slideInDown(href="#") Узнать больше
+                    .wow-outer
+                        button.button.button-winona.mt-3.wow.slideInDown(href="#") Узнать больше

@@ -1,0 +1,62 @@
+@import '../../pages/colors.styl'
+    
+section.services
+    .lists-row
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 20px 0;
+
+        h4.title
+            border-bottom: 1px solid $main-color;
+            padding-bottom: 10px;
+            display: inline-block;
+            margin: 40px 0;
+
+        .item
+            img 
+                position relative
+                height: 100%;
+                z-index: 1;
+                transform: scale(1);
+                transition: transform 2s ease;
+            
+            h5 
+                a
+                    margin-top 15px;
+                    color: $text-color-bold;
+                    font-weight: 300;
+
+                    &:hover
+                        color: $main-color;
+                    
+            a.blackout
+                display: flex;
+                overflow: hidden;
+                align-items: center;
+                justify-content: center;
+                
+                &:before
+                    content: '';
+                    position: absolute;
+                    background: transparent;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: background .5s ease;
+                    z-index: 2;
+
+                &:hover
+                    img 
+                        transform: scale(1.3);
+                        transition: transform 4s ease;
+
+                    &:before
+                        background: #2d37424d;
+                        transition: background .5s ease;
+
+@media only screen and (max-width: 760px)
+    section.services
+        .item
+            margin-bottom: 30px;

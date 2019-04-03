@@ -98,6 +98,9 @@ h6 {
 .padding-xs {
   padding: 40px 0;
 }
+.padding-xl {
+  padding: 120px 0;
+}
 .text-main {
   color: #0095d9;
 }
@@ -301,6 +304,34 @@ section.prices .box-price .pricing-minimal-price {
   section.prices .box-price {
     margin-bottom: 30px;
   }
+}
+section.recall ul {
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+}
+section.recall ul li {
+  width: 10px;
+  height: 10px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background: #e8e9ee;
+  opacity: 1 !important;
+  border: none;
+}
+section.recall ul li.active,
+section.recall ul li:hover {
+  background: #0095d9;
+  transform: scale(1.4);
+}
+section.recall .team .team_info .name {
+  font-size: 20px;
+  line-height: 1.2;
+  color: #0095d9;
+}
+section.recall .team .team_info .dev {
+  color: #aeb1be;
+  font-size: 15px;
 }
 section.last-blog .post a {
   position: relative;
