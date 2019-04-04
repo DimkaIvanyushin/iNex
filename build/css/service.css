@@ -342,7 +342,7 @@ section.tabs ul.nav.nav-tabs li.nav-item a.nav-link.active {
   }
 }
 section.breadcrumbs {
-  background-image: url("https://livedemo00.template-help.com/wt_67881/images/breadcrumbs-image-1.jpg");
+  background-image: url(../images/bg-1.jpg);
   background-size: cover;
   background-position-x: center;
   padding: 60px 0;

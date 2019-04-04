@@ -2,6 +2,13 @@ var $mainMenu = $('.main-menu');
 var menuOffsetTop = $mainMenu.offset().top;
 var check = false;
 
+// $('li.nav-item.dropdown').mouseenter(
+//     function () {
+//         console.log('in');
+//         //$('.bg-black').show();
+//     }
+// );
+
 $(window).bind('scroll', function () {
     if ($(window).scrollTop() > menuOffsetTop) {
         if (!check) {

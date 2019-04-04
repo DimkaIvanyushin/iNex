@@ -21,5 +21,6 @@ import '../../components/about-us/about-us.styl';
 import '../../components/services-all/services-all.styl';
 import '../../components/footer-main/footer.styl';
 
+import '../../components/breadcrumbs/breadcrumbs.js';
 // import '../../components/header-menu/header-menu.js';
 new WOW().init();

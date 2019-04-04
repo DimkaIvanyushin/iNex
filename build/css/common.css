@@ -4146,6 +4146,9 @@ header .navbar.main-menu ul.navbar-nav li.nav-item:hover span.chevron svg {
   transform: rotate(180deg);
   transition: color 0.5s ease, transform 0.5s ease;
 }
+header .navbar.main-menu ul.navbar-nav li.nav-item:hover .bg-black {
+  display: block;
+}
 header .navbar.main-menu ul.navbar-nav li.nav-item:hover .dropdown-menu {
   visibility: visible;
   opacity: 1;
@@ -4252,6 +4255,15 @@ header .navbar.main-menu ul.navbar-nav li.nav-item a.nav-link:hover {
 header .navbar.main-menu ul.navbar-nav li.nav-item a.nav-link:hover::before {
   transform: scale(1);
   transition: transform 0.5s ease;
+}
+header .bg-black {
+  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: -webkit-fill-available;
+  background: #000;
+  z-index: 9;
 }
 @media only screen and (max-width: 760px) {
   header .container-mobile-menu {

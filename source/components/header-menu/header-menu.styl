@@ -98,6 +98,9 @@ header
                             transform: rotate(180deg);
                             transition: color .5s ease, transform .5s ease;
 
+                    .bg-black
+                        display: block;
+
                     .dropdown-menu
                         visibility: visible;
                         opacity: 1;
@@ -129,10 +132,7 @@ header
                     overflow: hidden;
                     opacity: 0;
                     background: transparent;
-                    height: fit-content;
-                    //height: -webkit-fill-available;
-                    //background: #000000c7;
-                                        
+                    height: fit-content;                    
                     transition: visibility 0.2s ease, opacity 0.2s ease 0.1s;
 
                     .mega-menu-container
@@ -220,6 +220,15 @@ header
                         &::before
                             transform: scale(1);
                             transition: transform .5s ease;
+
+    .bg-black
+        display:none;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: -webkit-fill-available;
+        background: black;
+        z-index: 9;
 
 
 @media only screen and (max-width: 760px)
