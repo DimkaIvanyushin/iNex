@@ -106,7 +106,17 @@ header
                         .mega-menu-container
                             top: 0;
                             transition: top 0.5s ease;
-                        
+
+                // .bg-black
+                //     background: #000;
+                //     position: fixed;
+                //     width: 100%;
+                //     height: 100%;
+                //     left: 0;
+                //     visibility: visible;
+                //     opacity: 0.3;
+
+
                 .dropdown-menu
                     display block
                     visibility: hidden;
@@ -118,10 +128,12 @@ header
                     border: none;
                     overflow: hidden;
                     opacity: 0;
-                    height: -webkit-fill-available;
-                    background: #000000c7;
+                    background: transparent;
+                    height: fit-content;
+                    //height: -webkit-fill-available;
+                    //background: #000000c7;
                                         
-                    transition: visibility 0.5s ease, opacity 0.5s ease 0.1s;
+                    transition: visibility 0.2s ease, opacity 0.2s ease 0.1s;
 
                     .mega-menu-container
                         position: relative;
@@ -129,6 +141,9 @@ header
                         background: #fff;
                         border-bottom: 1px solid #cbced0;
                         transition: top 0.5s ease;
+
+                        &::before
+                            content: '';
 
                         .mega-menu-box
                             margin: 25px 0;
@@ -182,7 +197,7 @@ header
                     font-family: $text-family;
                     font-size: $text-size;
                     font-weight: 400;
-                    padding: 20px 0px;
+                    padding: 25px 0px;
                     letter-spacing: .08em;
                     text-transform: uppercase;
                     border-bottom: 2px solid transparent;

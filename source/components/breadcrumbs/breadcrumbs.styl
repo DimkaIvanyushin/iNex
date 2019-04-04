@@ -40,7 +40,7 @@ section.breadcrumbs
 
             &::after
                 margin-left: 25px;
-                content: '-';
+                content: '>';
 
             &:last-child
                 &::after
@@ -57,13 +57,10 @@ section.breadcrumbs
 
     section.breadcrumbs
         ul
-            flex-direction: column;
 
             li
                 margin-bottom: 5px;
+                margin-right: 3px;
 
                 &::after
-                    content: '';
-
-                &::before
-                    content: '-';
+                    margin-left: 3px;

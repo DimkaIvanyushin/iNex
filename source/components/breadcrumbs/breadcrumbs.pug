@@ -1,4 +1,4 @@
-mixin breadcrumbs(title, desc)
+mixin breadcrumbs(title, desc, list_path)
     section.breadcrumbs
         .container
             .row.content.d-flex.align-items-center
@@ -10,9 +10,6 @@ mixin breadcrumbs(title, desc)
             .row
                 .col-12.wow-outer
                     ul.wow.fadeInDown(data-wow-delay="0.8s")
-                        li 
-                            a(href="#") Главная
-                        li 
-                            a(href="#") Контроллеры
-                        li 
-                            a(href="#") ULC-02
+                        each val in list_path
+                            li 
+                                a(href="./services-list.html")=val

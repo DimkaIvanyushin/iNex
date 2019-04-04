@@ -2,16 +2,6 @@ var $mainMenu = $('.main-menu');
 var menuOffsetTop = $mainMenu.offset().top;
 var check = false;
 
-// $('.nav-item.dropdown').hover(
-//     function () {
-//         $(this).addClass("show");
-       
-//     }, function () {
-//         $(this).removeClass("show");
-//     }
-// );
-
-
 $(window).bind('scroll', function () {
     if ($(window).scrollTop() > menuOffsetTop) {
         if (!check) {

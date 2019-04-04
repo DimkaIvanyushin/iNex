@@ -381,7 +381,7 @@ section.breadcrumbs ul li {
 }
 section.breadcrumbs ul li::after {
   margin-left: 25px;
-  content: '-';
+  content: '>';
 }
 section.breadcrumbs ul li:last-child::after {
   content: '';
@@ -394,17 +394,12 @@ section.breadcrumbs ul li a:hover {
   color: #fff;
 }
 @media only screen and (max-width: 760px) {
-  section.breadcrumbs ul {
-    flex-direction: column;
-  }
   section.breadcrumbs ul li {
     margin-bottom: 5px;
+    margin-right: 3px;
   }
   section.breadcrumbs ul li::after {
-    content: '';
-  }
-  section.breadcrumbs ul li::before {
-    content: '-';
+    margin-left: 3px;
   }
 }
 section.per-char .title p {

@@ -7,7 +7,8 @@ block main
         +nav-bar('show','fixed-top', 'none-animation')
 
     include ../../components/breadcrumbs/breadcrumbs.pug
-    +breadcrumbs("Продукция", "Продукция")
+    -var values = ['Главная','Продукция']
+    +breadcrumbs("Продукция", "Продукция", values)
 
     include ../../components/about-us/about-us.pug
     +aboutUs('flex-row-reverse','bg-gray')
@@ -18,12 +19,12 @@ block main
         .container                
                 .col-sm-12.offset-lg-6.col-lg-5.text-justify
                     .wow-outer
-                        h4.wow.fadeInDown Сделайте первый шаг к
+                        h4.wow.fadeInDown Почему он используется?
                     .wow-outer
-                        h3.wow.fadeInDown Успеху Вашей Компании
+                        h3.wow.fadeInDown Давно выяснено
                     
                     .wow-outer
-                        p.wow.fadeInDown Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона."
+                        p.wow.fadeInDown что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона."
                     
                     .wow-outer
                         button.button.button-winona.mt-3.wow.fadeInDown(href="#") Узнать больше

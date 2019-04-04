@@ -8,7 +8,8 @@ block main
         //+nav-bar('show')
 
     include ../../components/breadcrumbs/breadcrumbs.pug
-    +breadcrumbs("Контроллеры", "ulc-02")
+    -var values = ['Главная','Продукция', 'ULC-02']
+    +breadcrumbs("Контроллеры", "ulc-02", values)
 
     section.service-info.padding-lg
         .container

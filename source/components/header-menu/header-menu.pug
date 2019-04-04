@@ -55,16 +55,19 @@ mixin nav-bar(visible, fix, animation)
 
             .collapse.navbar-collapse#navbarSupportedContent
 
-                .logo-box
+                a(href="./index.html").logo-box
                     img.logo-dt.d-none.d-md-block(src=require("../../resource/img/logo.svg") class=visible height='20' alt='logo')
 
                 ul.navbar-nav.mr-auto(class=visible class=animation)
-                    li.active.nav-item
-                        a.nav-link(href="#") Главная
 
-
+                    li.nav-item
+                        a.nav-link(href="#") Решения
+                    
                     li.nav-item.dropdown.position-static
-                        a.nav-link.dropdown-toggle#navbarDropdown(data-toggle="dropdown" href="#") Продукция
+                        a.nav-link.dropdown-toggle#navbarDropdown(href="./services-list.html") Продукция
+                            span.chevron
+                                    i.fas.fa-chevron-down
+                        //- a.nav-link.dropdown-toggle#navbarDropdown(data-toggle="dropdown" href="./services-all.html") Продукция
                             span.chevron
                                 i.fas.fa-chevron-down
                         .dropdown-menu
@@ -74,97 +77,96 @@ mixin nav-bar(visible, fix, animation)
                                         .col-12.col-md-3
                                             .mega-menu-box
                                                 h5 
-                                                    a(href="#") Контроллеры
+                                                    a(href="./service.html") Контроллеры
 
                                                 ul
                                                     li  
                                                         span.icon
                                                             i.fas.fa-angle-right
-                                                        a(href="#") UlC-02
+                                                        a(href="./service.html") UlC-02
                                                     li
                                                         span.icon
                                                             i.fas.fa-angle-right
-                                                        a(href="#") UlC-03
+                                                        a(href="./service.html") UlC-03
                                         .col-12.col-md-3
                                             .mega-menu-box
                                                 h5 
-                                                    a(href="#") Устройства связи
+                                                    a(href="./service.html") Устройства связи
 
                                                 ul
                                                     li
                                                         span.icon
                                                             i.fas.fa-angle-right
-                                                        a(href="#") 3G-модем
+                                                        a(href="./service.html") 3G-модем
                                                     li
                                                         span.icon
                                                             i.fas.fa-angle-right
-                                                        a(href="#") 3П-роутер
+                                                        a(href="./service.html") 3П-роутер
                                         .col-12.col-md-3
                                             .mega-menu-box
                                                 h5 
-                                                    a(href="#") Диспетчерскаие щиты
+                                                    a(href="./service.html") Диспетчерскаие щиты
 
                                                 ul
                                                     li
                                                         span.icon
                                                             i.fas.fa-angle-right
-                                                        a(href="#") Диспетчерский щит
+                                                        a(href="./service.html") Диспетчерский щит
                                         
                                         .col-12.col-md-3
                                             .mega-menu-box
                                                 h5 
-                                                    a(href="#") Оборудование АУ
+                                                    a(href="./service.html") Оборудование АУ
 
                                                 ul
                                                     li
                                                         span.icon
                                                             i.fas.fa-angle-right
-                                                        a(href="#") Реклоузеры
+                                                        a(href="./service.html") Реклоузеры
 
 
                                         .col-12.col-md-3
                                             .mega-menu-box
                                                 h5 
-                                                    a(href="#") Светильники
+                                                    a(href="./service.html") Светильники
 
                                                 ul
                                                     li
                                                         span.icon
                                                             i.fas.fa-angle-right
-                                                        a(href="#") Светильники уличного освещения
+                                                        a(href="./service.html") Светильники уличного освещения
 
                                         .col-12.col-md-3
                                             .mega-menu-box
                                                 h5 
-                                                    a(href="#") Контрольно-измерительные приборы
+                                                    a(href="./service.html") Контрольно-измерительные приборы
 
                                                 ul
                                                     li
                                                         span.icon
                                                             i.fas.fa-angle-right
                                                             
-                                                        a(href="#") Счётчик 1Ф электрической энергии
+                                                        a(href="./service.html") Счётчик 1Ф электрической энергии
 
                                                     li
                                                         span.icon
                                                             i.fas.fa-angle-right
-                                                        a(href="#") Счётчик 1Ф технического учёта
+                                                        a(href="./service.html") Счётчик 1Ф технического учёта
 
 
                                         .col-12.col-md-3
                                             .mega-menu-box
                                                 h5 
-                                                    a(href="#") Аналогово-цифровые преобразователи
+                                                    a(href="./service.html") Аналогово-цифровые преобразователи
 
                                                 ul
                                                     li
                                                         span.icon
                                                             i.fas.fa-angle-right
-                                                        a(href="#") Аналогово-цифровые преобразователи
-                                        
-                    li.nav-item
-                        a.nav-link(href="#") Решения
-                    
+                                                        a(href="./service.html") Аналогово-цифровые преобразователи
+
+                        .bg-black
+                             
                     li.nav-item
                         a.nav-link(href="#") О бренде
                     
